@@ -1,4 +1,21 @@
 ﻿body
 {
-	
+	background-color: #F0F8FF;
+}
+
+.grid-container
+{
+	display: grid;
+	grid-template-rows: 25% 50% 25%;
+	background-color: orange;
+	padding: 8px;
+
+	margin:auto;
+	height: 100%;
+	width: 80%;
+}
+
+.grid-item
+{
+	border: 1px solid #F0F8FF;
 }
