@@ -6,7 +6,7 @@
 .grid-container
 {
 	display: grid;
-	grid-template-rows: 25% 50% 25%;
+	grid-template-rows: 16vh 66vh 16vh;
 	background-color: orange;
 	padding: 8px;
 
