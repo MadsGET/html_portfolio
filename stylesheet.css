@@ -1,48 +1,105 @@
 ﻿body
 {
+	padding: 0;
+	margin: 0;
+}		
+
+div.page
+{
 	background-color: #F0F8FF;
-	margin: auto;
-	height: auto;
-	width: auto;
-}
-
-div.index
-{
-	background-color: red;
-	margin-top: 8px;
-	margin-bottom: 8px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 80%;
-	width: 50%;
-}
-
-.button-container
-{
 	display: grid;
-	height: 100%;
-	width: 100%;
-	grid-template-columns: 33% 33% 33%; 
-	grid-template-rows: 100% 50% 50%;
-}
-
-.grid-container
-{
-	display: grid;
-	grid-template-rows: 8vh 80vh 8vh;
-	background-color: orange;
-	padding: 8px;
-
-	margin: auto;
 	height: 100vh;
-	width: 100vh;
+	grid-template-rows: 3fr 20fr 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: 'header'
+						 'mainContent'
+						 'footer';
 }
 
-.button-item
+div.header
 {
-	border: 1px solid #F0F8FF;
+	background-color: #62acd1;	
+	border-bottom: 3px solid #568da8;
+	grid-area: header;
 }
-.grid-item
+
+div.mainContent
 {
-	border: 1px solid #F0F8FF;
+	background-color: snow;
+	/*background-image: url(background_white.png);*/
+	background-repeat: no-repeat;
+	background-position: center;
+	grid-area: mainContent;
+}
+
+div.displayContent
+{
+	background-color: black;
+	height: 60%;
+	width: 50%;
+	margin: auto;
+	margin-top: 7.5%;
+
+	/*Title Image text Info*/
+
+	display:grid;
+}
+
+div.footer
+{
+	background-color: #62acd1;	
+	border-top: 3px solid #568da8;
+	grid-area: footer;
+}
+
+div.menu
+{
+	height: 75%;	
+	width: 50%;
+	margin: 1.5vh 25%;
+	display:grid;
+	grid-template-areas: 'about spacerLeft portfolio spacerRight contact';
+	grid-template-columns: 20fr 0.25fr 20fr 0.25fr 20fr;
+	font-size: 48px;
+}
+
+/* Button style */
+div.buttonAbout, div.buttonPortfolio, div.buttonContact
+{
+	font-size: 75%;
+	color: snow;
+	text-align: center;
+	text-shadow: 2px 2px grey;
+	margin: auto;
+}
+
+/* Space Style */
+div.spacerLeft, div.spacerRight
+{
+	background-color:#568da8;
+}
+
+div.spacerLeft
+{
+	grid-area: spacerLeft;
+}
+
+div.spacerRight
+{
+	grid-area: spacerRight;
+}
+
+div.buttonAbout
+{
+	grid-area: about;
+}
+
+div.buttonPortfolio
+{
+	grid-area: portfolio;
+}
+
+div.buttonContact
+{
+	grid-area: contact;
 }
