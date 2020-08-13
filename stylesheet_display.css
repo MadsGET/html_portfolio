@@ -1,0 +1,61 @@
+﻿div.displayContent
+{
+	background-color: #62acd1;
+	background-image: url(background_white.png);
+	border: 3px solid #568da8;
+	height: 60%;
+	width: 50%;
+	margin: auto;
+	margin-top: 7.5%;
+
+	/*Title Image text Info*/
+
+	display:grid;
+	grid-template-areas: 'title title title image image'
+						 'text text text image image'
+						 'text text text info info'
+						 'text text text info info';
+}
+
+div.title
+{
+	grid-area: title;
+	font-size: 8vh;
+	color:snow;
+	margin-top: 10%;
+	text-align: center;
+	text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+}
+
+.profileImage
+{
+	background-image: url(profile_left.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+div.imageContainer
+{
+	grid-area: image;
+}
+
+div.text
+{
+	grid-area: text;
+}
+
+div.info
+{
+	grid-area: info;
+}
+
+div.title, div imageContainer, div.text, div.info
+{
+/*
+	background:cyan;*/
+	border: 1px solid black;
+}
