@@ -19,14 +19,17 @@ div.page
 div.header
 {
 	background-color: #62acd1;	
-	border-bottom: 3px solid #568da8;
+	background-image: url(gradient_top.png);
+	background-repeat: repeat-x;
+	border-bottom: 3px solid rgb(220, 220, 220);
 	grid-area: header;
 }
 
 div.mainContent
 {
 	background-color: snow;
-	background-image: url(background_white.png);
+	background-image: url(background_blueRain.png);
+	background-size: contain;
 	background-position: center;
 	grid-area: mainContent;
 }
@@ -34,7 +37,9 @@ div.mainContent
 div.footer
 {
 	background-color: #62acd1;	
-	border-top: 3px solid #568da8;
+	background-image: url(gradient_bottom.png);
+	background-size: contain;
+	border-top: 3px solid rgb(220, 220, 220);
 	grid-area: footer;
 }
 
