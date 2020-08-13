@@ -4,7 +4,9 @@
 	background-image: url(background_white.png);
 	border: 3px solid #568da8;
 	height: 60%;
+	max-height: 60%;
 	width: 50%;
+	max-width: 50%;
 	margin: auto;
 	margin-top: 7.5%;
 
@@ -17,10 +19,12 @@
 						 'text text text info info';
 }
 
-div.title
+div.titleContainer
 {
 	grid-area: title;
-	font-size: 8vh;
+	font-size: 6vh;
+	max-width: 6wh;
+	width: 6wh;
 	color:snow;
 	margin-top: 10%;
 	text-align: center;
@@ -28,34 +32,56 @@ div.title
 	overflow: hidden;
 }
 
-.profileImage
-{
-	background-image: url(profile_left.png);
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 100%;
-	width: 100%;
-}
-
 div.imageContainer
 {
 	grid-area: image;
+	width: 6wh;
 }
 
-div.text
+div.textContainer
 {
 	grid-area: text;
 }
 
-div.info
+div.infoContainer
 {
 	grid-area: info;
 }
 
-div.title, div imageContainer, div.text, div.info
+div.titleContainer, div.imageContainer, div.textContainer, div.infoContainer
 {
 /*
-	background:cyan;*/
+	background:cyan;
+	*/
 	border: 1px solid black;
+}
+
+.profileImage
+{
+	background-image: url(profile_left.png);
+	background-size: contain;
+	background-position: center left;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 90%;
+}
+
+div.textElement
+{
+	background-color: rgba(0, 0, 0, 0.1);
+	border: 4px solid #568da8;
+	margin: auto;
+	margin-top: 2.5%;
+	overflow: auto;
+	max-height: 24vh;
+	height: 24vh;
+	max-width: 28vw;
+	width: 28vw;
+}
+
+p.mainText
+{
+	font-size: 1.8vh;
+	margin-top: 10%;
+	text-align:center;
 }
