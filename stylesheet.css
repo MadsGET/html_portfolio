@@ -26,8 +26,7 @@ div.header
 div.mainContent
 {
 	background-color: snow;
-	/*background-image: url(background_white.png);*/
-	background-repeat: no-repeat;
+	background-image: url(background_white.png);
 	background-position: center;
 	grid-area: mainContent;
 }
@@ -77,6 +76,7 @@ div.buttonAbout, div.buttonPortfolio, div.buttonContact
 div.spacerLeft, div.spacerRight
 {
 	background-color:#568da8;
+	border-right: 1px solid #457288;
 }
 
 div.spacerLeft
