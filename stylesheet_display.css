@@ -1,7 +1,6 @@
 ﻿div.displayContent
 {
-	background-color: #62acd1;
-	/*background-image: url(background_white.png);*/
+	background-color: #62acd1e7;
 	border: 3px solid #568da8;
 	height: 48vh;
 	max-height: 48vh;
@@ -65,9 +64,9 @@ div.titleContainer, div.imageContainer, div.textContainer, div.infoContainer
 	background-position: center;
 	background-size: contain;
 	height:24vh;
-	height-max: 24vh;
+	max-height: 24vh;
 	width:24wh;
-	width-max: 24wh;
+	max-width: 24wh;
 }
 
 div.largeBox, div.smallBox

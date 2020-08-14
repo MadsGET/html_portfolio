@@ -8,15 +8,23 @@
 </head>
 
 <body>
+    
+<script src="menuScript.js"></script>
 
 <div class = "page">
 
     <div class="header">
         <div class="menu"> 
             <div class="spacerLeft"></div>
-            <div class="buttonAbout">About</div>
-            <div class="buttonPortfolio">Portfolio</div>
-            <div class="buttonContact">Contact</div>
+            
+            <a href="index.html" style="text-decoration: none; margin: auto;">
+                <div class="buttonAbout"><div class ="selection">About</div></div>
+            </a>
+            
+            <a href="https://www.google.com/" style="text-decoration: none; margin: auto;">
+            <div class="buttonPortfolio" onclick="OnClick(this);">Portfolio</div>
+            </a>
+            <div class="buttonContact" onclick="OnClick(this);">Contact</div>
             <div class="spacerRight"></div>
         </div>
 

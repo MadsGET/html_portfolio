@@ -4,6 +4,11 @@
 	margin: 0;
 }		
 
+div.selection:hover
+{
+	color:#0000001c;
+}
+
 div.page
 {
 	background-color: #F0F8FF;
