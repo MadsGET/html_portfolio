@@ -1,0 +1,26 @@
+div.rain 
+{
+    /*background-image: url(Images/rain.png); */
+    background-repeat: repeat;
+    background-size:contain;
+    background-position: center;
+    animation-name:rain;
+    animation-duration:64s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+
+@keyframes rain 
+{
+    0% 
+    {
+        background-position: 0vw -100vh;
+    }
+    100% 
+    {
+        background-position: 0vw 100vh;
+    }
+}

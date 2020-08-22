@@ -1,0 +1,64 @@
+body 
+{
+	background-image: url('Images/background.png');
+	background-color: darkslategrey;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+}
+
+div.gridContainer 
+{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+
+	grid-template: 'header' 'content';
+	grid-template-rows: 8vh 92vh;
+	display: grid;
+}
+
+div.header 
+{
+	background-image: linear-gradient(rgba(40, 100, 130, 0.2), rgba(40, 100, 130, 0.2), rgba(40, 100, 130, 0.2));
+	border-bottom: 1px solid rgba(0, 245, 255, 0.5);
+	box-sizing: border-box;
+	height: 100%;
+	min-height: 72px;
+	min-width: 100vw;
+}
+
+div.content 
+{
+	height:100%;
+	width:100%;
+}
+
+div.menuContent 
+{
+	grid-template: 'contact about portfolio';
+	grid-template-columns: 2fr 2fr 2fr;
+	margin: auto;
+	width: 33%;
+	min-width:512px;
+	height: 100%;
+	display: grid;
+}
+
+button 
+{
+	border:none;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+button.contact, button.about, button.portfolio 
+{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-color: rgb(83, 130, 156);
+	color: rgba(195, 230, 250, 1);
+	font-size: 32px;
+	margin-top: 2%;
+	height: 60%;
+}
