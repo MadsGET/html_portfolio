@@ -1,8 +1,8 @@
 div.rain 
 {
     /*background-image: url(Images/rain.png); */
-    background-repeat: repeat;
-    background-size:contain;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     animation-name:rain;
     animation-duration:64s;
@@ -11,16 +11,23 @@ div.rain
     width:100%;
     height:100%;
     position:absolute;
+    z-index:-1;
 }
 
 @keyframes rain 
 {
     0% 
     {
+        opacity:0;
         background-position: 0vw -100vh;
     }
+    50% 
+    {
+        opacity: 1;
+    }    
     100% 
     {
+        opacity:0;
         background-position: 0vw 100vh;
     }
 }

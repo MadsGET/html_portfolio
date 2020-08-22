@@ -22,18 +22,21 @@ div.gridContainer
 
 div.header 
 {
-	background-image: linear-gradient(rgba(40, 100, 130, 0.2), rgba(40, 100, 130, 0.2), rgba(40, 100, 130, 0.2));
+	background-image: linear-gradient(rgba(97, 191, 238, 0.2), rgba(40, 100, 130, 0.6), rgba(40, 100, 130, 0.4));
+	/*background-image: linear-gradient(rgba(40, 100, 130, 0.2), rgba(40, 100, 130, 0.3), rgba(40, 100, 130, 0.2));*/
 	border-bottom: 1px solid rgba(0, 245, 255, 0.5);
 	box-sizing: border-box;
 	height: 100%;
 	min-height: 72px;
 	min-width: 100vw;
+	margin:0;
 }
 
 div.content 
 {
 	height:100%;
 	width:100%;
+	margin:0;
 }
 
 div.menuContent 
@@ -53,12 +56,40 @@ button
 	background-color: rgba(0, 0, 0, 0);
 }
 
+button.about 
+{
+	border-left: 4px solid;
+	border-right: 4px solid;
+}
+
 button.contact, button.about, button.portfolio 
 {
+	text-shadow:2px 2px rgba(0, 0, 0, 0.5);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	border-color: rgb(83, 130, 156);
+	border-color: rgba(195, 230, 250, 0.5);
 	color: rgba(195, 230, 250, 1);
 	font-size: 32px;
-	margin-top: 2%;
+	margin-top: 5%;
 	height: 60%;
+}
+
+button.contact:hover, button.about:hover, button.portfolio:hover 
+{
+	color: rgba(195, 230, 250, 0.5);
+	text-decoration:underline;
+}
+
+.pageSelection
+{
+	text-decoration:underline;
+}
+
+.test 
+{
+	margin-top: 8%;
+	margin-left: 25%;
+	height: 60%;
+	width: 50%;
+	/*background-color:rgba(230, 37, 37, 0.40);*/
+	background-repeat: no-repeat;
 }
