@@ -22,14 +22,15 @@ div.gridContainer
 
 div.header 
 {
-	background-image: linear-gradient(rgba(97, 191, 238, 0.2), rgba(40, 100, 130, 0.6), rgba(40, 100, 130, 0.4));
+	background-image: linear-gradient(rgba(110,140,145, 0.5), rgba(140,200,205, 0.25),rgba(110,140,145, 0.5));
+	/*background-image: linear-gradient(rgba(97, 191, 238, 0.2), rgba(40, 100, 130, 0.6), rgba(40, 100, 130, 0.4));*/
 	/*background-image: linear-gradient(rgba(40, 100, 130, 0.2), rgba(40, 100, 130, 0.3), rgba(40, 100, 130, 0.2));*/
-	border-bottom: 1px solid rgba(0, 245, 255, 0.5);
+	border-bottom: 1px solid rgba(76, 233, 247, 0.20);
 	box-sizing: border-box;
 	height: 100%;
 	min-height: 72px;
 	min-width: 100vw;
-	margin:0;
+	margin: 0;
 }
 
 div.content 
@@ -64,10 +65,10 @@ button.about
 
 button.contact, button.about, button.portfolio 
 {
-	text-shadow:2px 2px rgba(0, 0, 0, 0.5);
+	text-shadow:1px 2px rgb(122, 156, 176);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	border-color: rgba(195, 230, 250, 0.5);
-	color: rgba(195, 230, 250, 1);
+	color: rgb(116, 186, 225);
 	font-size: 32px;
 	margin-top: 5%;
 	height: 60%;
