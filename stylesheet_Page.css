@@ -1,43 +1,59 @@
-body 
-{
+body {
 	background-image: url('Images/background.png');
 	background-color: darkslategrey;
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
 	width: 100vw;
+	min-height: 512px;
+	min-width: 1024px;
 	margin: 0;
 }
 
-div.gridContainer 
+.colorA 
 {
+	color: rgba(175, 224, 240, 1.0);
+}
+
+.shadowA 
+{
+	text-shadow: 1px 2px rgba(175, 224, 240, 0.8);
+}
+
+.gridContainer 
+{
+	grid-template: 'header' 'content';
+	display: grid;
 	height: 100%;
 	width: 100%;
-	margin: 0;
-
-	grid-template: 'header' 'content';
-	grid-template-rows: 8vh 92vh;
-	display: grid;
 }
 
-div.header 
+.header 
 {
 	background-image: linear-gradient(rgba(110,140,145, 0.5), rgba(140,200,205, 0.25),rgba(110,140,145, 0.5));
 	/*background-image: linear-gradient(rgba(97, 191, 238, 0.2), rgba(40, 100, 130, 0.6), rgba(40, 100, 130, 0.4));*/
 	/*background-image: linear-gradient(rgba(40, 100, 130, 0.2), rgba(40, 100, 130, 0.3), rgba(40, 100, 130, 0.2));*/
 	border-bottom: 1px solid rgba(76, 233, 247, 0.20);
 	box-sizing: border-box;
-	height: 100%;
-	min-height: 72px;
-	min-width: 100vw;
+	height: 10vh;
+	width: 100vw;
+	min-width: 1024px;
+	min-height: 64px;
 	margin: 0;
 }
 
-div.content 
+.content 
 {
-	height:100%;
-	width:100%;
-	margin:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*box-sizing: border-box;
+	border: 2px solid red;*/
+	margin: auto;
+	height: 90vh;
+	width: 50vw;
+	min-height: 512px;
+	min-width: 1024px;
 }
 
 div.menuContent 
@@ -46,7 +62,8 @@ div.menuContent
 	grid-template-columns: 2fr 2fr 2fr;
 	margin: auto;
 	width: 33%;
-	min-width:512px;
+	min-width: 512px;
+	min-height: 64px;
 	height: 100%;
 	display: grid;
 }
@@ -65,10 +82,8 @@ button.about
 
 button.contact, button.about, button.portfolio 
 {
-	text-shadow:1px 2px rgb(122, 156, 176);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	border-color: rgba(195, 230, 250, 0.5);
-	color: rgb(116, 186, 225);
 	font-size: 32px;
 	margin-top: 5%;
 	height: 60%;
@@ -85,12 +100,52 @@ button.contact:hover, button.about:hover, button.portfolio:hover
 	text-decoration:underline;
 }
 
-.test 
+h1.boxHeading {
+	/*box-sizing:border-box;
+	border: 1px solid black;*/
+	padding: 0;
+	font-size: 48px;
+	text-align: center;
+	text-shadow: 1px 1px;
+	margin-top: 7.5%;
+	margin-left: 23.5%;
+	height: 64px;
+	width: 350px;
+}
+
+.portrait 
 {
-	margin-top: 8%;
-	margin-left: 25%;
+	/*box-sizing:border-box;
+	border:1px solid black;*/
+	height:45%;
+	width:25%;
+	margin-left:59%;
+	margin-top:-12.5%;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-image: url("Images/portrait.png");
+}
+
+.box 
+{
 	height: 60%;
 	width: 50%;
-	/*background-color:rgba(230, 37, 37, 0.40);*/
+	min-height: 512px;
+	min-width: 1024px;
+	/*background-color: rgba(230, 37, 37, 0.40);*/
+	background-size: contain;
+	background-position: center;
 	background-repeat: no-repeat;
+	background-image: url('Images/box.png');
+	display: inline-block;
+}
+
+.textBoxLarge 
+{
+	margin-left:16.5%;
+	margin-top:-7.5%;
+	background-color:rgba(110,140,145, 0.7);
+	height:40%;
+	width:40%;
 }
