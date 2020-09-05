@@ -18,23 +18,30 @@
 .headerLayerB
 {
 	grid-template-areas: 'headerBackL headerBackM headerBackR';
-	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-columns: 1fr 8fr 1fr;
 	grid-template-rows: 1fr;
 }
 
-.headerBackL, .headerBackM, headerBackR
+.headerBackL, .headerBackM, .headerBackR
 {
-	box-sizing:border-box;
-	border:4px solid black;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:contain;
+	min-height: 96px;
+	min-width: 96px;
 }
 
 .headerBackL
 {
+	max-height: 96px;
+	max-width: 96px;
 	background-image: url('images/header_LeftEnd.png');
 }
 
 .headerBackM
 {
+	background-repeat: repeat-x;
 	background-image: url('images/header_middle.png');
 }
 
