@@ -1,49 +1,44 @@
 .header
 {
-	display: grid;
 	height: 100%;
 	width: 100%;
-	grid-template-areas: 'backL backM backR';
-	grid-template-columns: 1fr 8fr 1fr;
+	/*grid-template-areas: 'backL backM backR';*/
+	display: grid;
+}
+
+.headerLayerA, .headerLayerB
+{
+	height: 100%;
+	width: 100%;
+	grid-row: 1; 
+	grid-column:1;
+	display:grid;
+}
+
+.headerLayerB
+{
+	grid-template-areas: 'headerBackL headerBackM headerBackR';
+	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: 1fr;
 }
 
-.headContent
+.headerBackL, .headerBackM, headerBackR
 {
-	position:inherit;
-	height:100%;
-	width:100%;
-	background-color:red;
+	box-sizing:border-box;
+	border:4px solid black;
 }
 
-.backL, .backM, .backR
+.headerBackL
 {
-	position:static;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	min-height: 96px;
-	min-width: 96px;
-	/*
-	box-sizing: border-box;
-	border: 4px solid black;
-	*/
+	background-image: url('images/header_LeftEnd.png');
 }
 
-.backL
+.headerBackM
 {
-	background-position: center right;
-	background-image: url('images/header_leftEnd.png');
-}
-
-.backM
-{
-	background-repeat: repeat-x;
 	background-image: url('images/header_middle.png');
 }
 
-.backR
+.headerBackR
 {
-	background-position: center left;
 	background-image: url('images/header_rightEnd.png');
 }
