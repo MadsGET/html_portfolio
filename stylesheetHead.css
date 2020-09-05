@@ -1,0 +1,49 @@
+.header
+{
+	display: grid;
+	height: 100%;
+	width: 100%;
+	grid-template-areas: 'backL backM backR';
+	grid-template-columns: 1fr 8fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+.headContent
+{
+	position:inherit;
+	height:100%;
+	width:100%;
+	background-color:red;
+}
+
+.backL, .backM, .backR
+{
+	position:static;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	min-height: 96px;
+	min-width: 96px;
+	/*
+	box-sizing: border-box;
+	border: 4px solid black;
+	*/
+}
+
+.backL
+{
+	background-position: center right;
+	background-image: url('images/header_leftEnd.png');
+}
+
+.backM
+{
+	background-repeat: repeat-x;
+	background-image: url('images/header_middle.png');
+}
+
+.backR
+{
+	background-position: center left;
+	background-image: url('images/header_rightEnd.png');
+}
