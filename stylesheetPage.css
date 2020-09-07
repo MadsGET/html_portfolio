@@ -23,13 +23,13 @@ div.page
 	min-width:1024px;
 	display: grid;
 	grid-template-areas: 'header' 'content' 'footer';
-	grid-template-rows: 2fr 8fr 1fr;
+	grid-template-rows: 1fr 8fr 1fr;
 	grid-template-columns: 1fr;
 }
 
 
 
-.header, .content, .footer
+.content, .footer, .header
 {
 	box-sizing: border-box;
 	border: 4px solid black;
