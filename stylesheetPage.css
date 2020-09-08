@@ -2,7 +2,7 @@
 {
 	align-items: center;
 	display: flex;
-	background-image: url('images/background.png');
+	background-image: url('images/background2.png');
 	background-size: cover;
 	background-color: black;
 	min-height: 720px;
@@ -32,6 +32,6 @@ div.page
 .content, .footer, .header
 {
 	box-sizing: border-box;
-	border: 4px solid black;
+	/*border: 4px solid black;*/
 }
 
