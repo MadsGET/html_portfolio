@@ -7,44 +7,64 @@
 
 .contentLayerA, .contentLayerB
 {
+	height: 70%;
+	width: 57%;
 	grid-row: 1;
 	grid-column: 1;
 	margin: auto;
 	box-sizing: border-box;
 }
-.contentLayerA
-{
-	height: 65%;
-	width: 55%;
-}
-
-.contentHead
-{
-	height:15%;
-	min-height:52px;
-	width:100%;
-	align-items:center;
-	display:flex;
-}
 
 h1
 {
-	margin:auto;
-	color:snow;
-	font-size:300%;
+	margin: auto;
+	color: snow;
+	font-size: 300%;
 }
 
-.contentHead
+.contentLayerA
+{
+	background-color: rebeccapurple;
+	grid-template-areas: 'head head head' 'boxL boxL portrait' 'boxL boxL boxS';
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 1fr 1fr;
+	grid-gap: 16px;
+	display: grid;
+}
+
+.contentHead, .contentBoxL, .contentBoxS, .contentPortrait
 {
 	box-sizing: border-box;
 	border: 4px solid rgba(255, 255, 255, 0.2);
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
+.contentHead
+{
+	align-items: center;
+	display: flex;
+	grid-area:head;
+}
+
+.contentBoxL
+{
+	grid-area: boxL;
+}
+
+.contentBoxS
+{
+	grid-area: boxS;
+}
+
+.contentPortrait
+{
+	grid-area: portrait;
+}
+
 .contentLayerB
 {
 	height: 85%;
-	width:  66%;
+	width: 66%;
 	border: 64px dashed transparent;
 	border-image: url('images/9slice_largeBox.png') 64 stretch;
 }
