@@ -1,5 +1,12 @@
 
 // Static text.
+var content1smallText =
+// Det ligger en bug her?
+` 
+<p style="Text-Align: left; float:left; margin-left: 2.5%">[-] NAME:  <br> [-] DOB:  <br> [-] LOCATION:</p>
+<p style="Text-Align: right; float:right; margin-right: 2.5%">Mads  <br> 1994  <br> Norway</p>
+<small> Experience: C#, Javascript, HTML, CSS, Photoshop, Unity3D, Blender.</small>
+`;
 
 // Static HTML code
 var headerHTML = `
@@ -19,7 +26,7 @@ var content1HTML = `
 	<div class="contentLayerA">
 			<div class="contentHead"><h1>< Hello World ></h1></div>
 			<div class="contentBoxL"></div>
-			<div class="contentBoxS">[-] Name: Mads</div>
+			<div class="contentBoxS">${content1smallText}</div>
 			<div class="contentPortrait"></div>
 	</div>
 	<div class="contentLayerB"></div>

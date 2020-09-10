@@ -6,8 +6,8 @@ function drawView()
 {
 	document.getElementById('page').innerHTML = `
 		${headerHTML}	
-		${content1HTML}
-		${footerHTML}
+		${content1HTML}	
+		${footerHTML}	
 	`;
 }
 
