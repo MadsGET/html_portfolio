@@ -7,8 +7,8 @@
 
 .contentLayerA, .contentLayerB
 {
-	height: 70%;
-	width: 57%;
+	height: 65%;
+	width: 50%;
 	grid-row: 1;
 	grid-column: 1;
 	margin: auto;
@@ -68,7 +68,7 @@ h1
 .contentLayerB
 {
 	height: 85%;
-	width: 66%;
+	width: 65%;
 	border: 64px dashed transparent;
-	border-image: url('images/9slice_largeBox.png') 64 stretch;
+	border-image: url('images/9slice_largeBox.png') 33% repeat;
 }

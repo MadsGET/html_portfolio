@@ -5,12 +5,12 @@
 	background-image: url('images/background2.png');
 	background-size: cover;
 	background-color: black;
-	min-height: 720px;
-	min-width: 1280px;
 	height: 100vh;
 	width: 100vw;
 	padding: 0;
 	margin: 0;
+
+	font-size:1vw;
 }
 
 div.page
@@ -18,9 +18,9 @@ div.page
 	/*background-color: rgba(0, 255, 255, 0.5);*/
 	margin: 0px auto;
 	height: 98%;
-	min-height: 512px;
 	width: 85%;
-	min-width: 1024px;
+	min-height:512px;
+	min-width:512px;
 	display: grid;
 	grid-template-areas: 'header' 'content' 'footer';
 	grid-template-columns: 1fr;
