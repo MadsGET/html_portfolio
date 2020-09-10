@@ -36,23 +36,29 @@
 	background-image: url('images/header_Decoration.png');
 }
 
-.buttonL
+.buttonL, .buttonM, .buttonR
 {
-	opacity:0.5;
-	background-image: url('images/button_Contact.png');
+	/*box-sizing: border-box;
+	border:2px solid white;*/
+	background-image:url('images/button_Line.png');
+	background-size:10%;
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	align-content: center;
+	display: flex;
 }
 
-.buttonM
+.navText
 {
-	opacity:1.0;
-	background-image: url('images/button_About.png');
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size:150%;
+	text-align:center;
+	color:snow;
+	margin:auto;
 }
 
-.buttonR
-{
-	opacity:0.5;
-	background-image: url('images/button_Portfolio.png');
-}
+.lText{}
+.hText {padding-bottom: 10%}
 
 .buttonL:hover, .buttonM:hover, .buttonR:hover
 {
