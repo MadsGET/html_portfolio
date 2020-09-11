@@ -1,3 +1,49 @@
+.header, .headerBackground, .headerContainer
+{
+	grid-row: 1;
+	grid-column: 1;
+}
 
+.header
+{
+	height: 100%;
+	width: 100%;
+	display: grid;
+}
 
+.headerBackground
+{
+	height: 100%;
+	width: 100%;
+	box-sizing:border-box;
+	border: 76px solid transparent;
+	border-image: url(images/9slice_deoratedBox.png) 33% repeat;
+}
 
+.headerContainer
+{
+	height: 65%;
+	width: 85%;
+
+	margin: auto;
+	grid-template-columns: auto auto auto auto auto;
+	display: grid;
+}
+
+.headerDecoration
+{
+	min-width:48px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('images/header_Decoration.png');
+}
+
+.headerButton
+{
+	min-width:64px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('images/button_About.png');
+}
