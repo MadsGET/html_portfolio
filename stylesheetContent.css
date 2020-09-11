@@ -1,1 +1,37 @@
+.contentBackground, .contentContainer
+{
+	grid-row: 1;
+	grid-column: 1;
+}
+
+.content
+{
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	display: grid;
+}
+
+.contentBackground
+{
+	margin:auto;
+	height: 80%;
+	width: 66%;
+	box-sizing: border-box;
+	border: 64px solid transparent;
+	border-image: url(images/9slice_largeBox.png) 33% stretch;
+}
+
+.contentContainer
+{
+	background-color: rgba(255, 0, 0, 0.2);
+	margin: auto;
+	height: 80%;
+	width: 66%;
+
+	grid-template-areas: 'heading heading heading' 'boxL boxL portrait' 'boxL boxL boxS';
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
+	display:grid;
+}
 

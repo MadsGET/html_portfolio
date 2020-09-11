@@ -1,4 +1,4 @@
-.header, .headerBackground, .headerContainer
+.headerBackground, .headerContainer
 {
 	grid-row: 1;
 	grid-column: 1;
@@ -33,7 +33,7 @@
 .headerDecoration
 {
 	min-width:48px;
-	background-size: contain;
+	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image: url('images/header_Decoration.png');
@@ -41,9 +41,15 @@
 
 .headerButton
 {
+	opacity: 0.5;
 	min-width:64px;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image: url('images/button_About.png');
+}
+
+.headerButton:hover
+{
+	opacity: 1.0;
 }
