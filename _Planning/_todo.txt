@@ -1,5 +1,4 @@
 	[High priority]
-- Design contact page UI
 - Implement contact page
 - Design portfolio page UI
 - Implement portfolio page

@@ -19,15 +19,13 @@
 	margin: 0px auto;
 	height: 98%; /*Spacing for the page*/
 	width: 85%;
-	min-height:512px;
-	min-width:512px;
+	min-height: 512px;
+	min-width: 512px;
 	display: grid;
 	grid-template-areas: 'header' 'content' 'footer';
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 8fr 1fr;
 }
-
-
 
 .content, .footer, .header
 {
