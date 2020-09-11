@@ -14,7 +14,7 @@
 
 .contentBackground
 {
-	margin:auto;
+	margin: auto;
 	height: 80%;
 	width: 66%;
 	box-sizing: border-box;
@@ -24,14 +24,53 @@
 
 .contentContainer
 {
-	background-color: rgba(255, 0, 0, 0.2);
+	/*background-color: rgba(255, 0, 0, 0.2);*/
 	margin: auto;
-	height: 80%;
-	width: 66%;
+	height: 65%;
+	width: 50%;
+	grid-template-areas: 'boxH boxH boxH' 'boxL boxL contentPortrait' 'boxL boxL boxS';
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 1fr 1fr;
+	grid-gap: 16px;
+	display: grid;
+}
 
-	grid-template-areas: 'heading heading heading' 'boxL boxL portrait' 'boxL boxL boxS';
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto auto auto;
-	display:grid;
+/*
+.contentBox, .contentPortrait
+{
+	box-sizing:border-box;
+	border: 1px solid red;
+}*/
+
+.contentBox
+{
+	box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.contentPortrait
+{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('images/portrait.png');
+}
+
+h1
+{
+	font-size:250%;
+	width:60%;
+	margin:auto;
+}
+
+@media only screen and (max-width:768px)
+{
+	/* Mobile Displays*/
+	[class="contentBackground"]
+	{
+		background-color: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 1);
+	}
 }
 

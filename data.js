@@ -22,10 +22,10 @@ var content1HTML = `
 <div class="content">
 <div class="contentBackground"></div>
 <div class="contentContainer">
-	<div class="contentBox contentHead"></div>
-	<div class="contentBox contentHead"></div>
-	<div class="contentBox contentHead"></div>
-	<div class="contentBox contentHead"></div>
+	<div class="contentBox" style="grid-area: boxH; align-items:center; display:flex;"><h1>< Hello World ></h1></div>
+	<div class="contentBox" style="grid-area: boxL;"></div>
+	<div class="contentBox" style="grid-area: boxS;"></div>
+	<div class="contentPortrait"></div>
 </div>
 </div>`;
 
