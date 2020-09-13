@@ -26,3 +26,45 @@
 		opacity: 0.0;
 	}
 }
+
+.fadeOut
+{
+	animation-duration: 2s;
+	animation-name: animMoveOut;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.fadeIn
+{
+	animation-duration: 2s;
+	animation-name: animMoveIn;
+	animation-timing-function: linear;
+	animation-fill-mode:forwards;
+}
+
+@keyFrames animMoveOut
+{
+	0%
+	{
+		opacity:1;
+	}
+
+	100%
+	{
+		opacity:0.0;
+	}
+}
+
+@keyFrames animMoveIn
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+
+	100%
+	{
+		opacity: 1.0;
+	}
+}

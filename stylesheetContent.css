@@ -44,6 +44,7 @@
 
 .contentBox
 {
+	overflow:auto;
 	box-sizing: border-box;
 	background-color: rgba(255, 255, 255, 0.05);
 	border: 3px solid rgba(255, 255, 255, 0.1);
@@ -59,9 +60,23 @@
 
 h1
 {
-	font-size:250%;
+	font-size:2.5em;
+	text-align:center;
 	width:60%;
+	height:90%;
+	background-color:rebeccapurple;
 	margin:auto;
+}
+
+.contentCard
+{
+	margin: auto;
+	height: 50%;
+	width: 50%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('images/bussinessCard.png');
 }
 
 @media only screen and (max-width:768px)
@@ -69,6 +84,8 @@ h1
 	/* Mobile Displays*/
 	[class="contentBackground"]
 	{
+		height: 70%;
+		width: 55%;
 		background-color: rgba(255, 255, 255, 0.05);
 		border: 1px solid rgba(255, 255, 255, 1);
 	}
