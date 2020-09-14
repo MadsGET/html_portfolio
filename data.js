@@ -10,13 +10,14 @@ function getHeader(buttonIndex)
 {
 	return `
 	<div class="header">
-	<div class="headerBackground"></div>
-	<div class="headerContainer">
-		<div class="headerDecoration"></div>
-		<div class="headerButton" onClick="onPageSelection(0, ${buttonIndex[0]})" style="background-image: url(images/buttons/${urlButtonS[buttonIndex[0]]}.png)"></div>
-		<div class="headerButton" onClick="onPageSelection(1, ${buttonIndex[1]})" style="background-image: url(images/buttons/${urlButtonL[buttonIndex[1]]}.png); opacity: 1.0;"></div>
-		<div class="headerButton" onClick="onPageSelection(2, ${buttonIndex[2]})" style="background-image: url(images/buttons/${urlButtonS[buttonIndex[2]]}.png)"></div>
-		<div class="headerDecoration"></div>
+	<div class="headerBackground">
+		<div class="headerContainer">
+			<div class="headerDecoration"></div>
+			<div class="headerButton" onClick="onPageSelection(0, ${buttonIndex[0]})" style="background-image: url(images/buttons/${urlButtonS[buttonIndex[0]]}.png)"></div>
+			<div class="headerButton" onClick="onPageSelection(1, ${buttonIndex[1]})" style="background-image: url(images/buttons/${urlButtonL[buttonIndex[1]]}.png); opacity: 1.0;"></div>
+			<div class="headerButton" onClick="onPageSelection(2, ${buttonIndex[2]})" style="background-image: url(images/buttons/${urlButtonS[buttonIndex[2]]}.png)"></div>
+			<div class="headerDecoration"></div>
+		</div>
 	</div>
 	</div> `
 }
@@ -38,19 +39,20 @@ var content0HTML =
 ` ;
 
 var content1HTML = `	
-<div class="contentBackground"></div>
-<div class="contentContainer">
-	<div class="contentBox" style="grid-area: boxH; align-items:center; display:flex; overflow:hidden;">
-		<p style="margin: auto; font-size:250%">< Hello World ></p>
+<div class="contentBackground">
+	<div class="contentContainer">
+		<div class="contentBox" style="grid-area: boxH; align-items:center; display:flex; overflow:hidden;">
+			<p style="margin: auto; font-size:250%">< Hello World ></p>
+		</div>
+		<div class="contentBox" style="grid-area: boxL;">
+			<p style="font-size:75%">${largeInfo}</p>
+		</div>
+		<div class="contentBox" style="grid-area: boxS;">
+		<p style="float:left;margin-left: 5%">[-] DOB: <br> [-]Name:<br> [-]Location: </p>
+		<p style="float:right; margin-right: 5%">1994 <br> Mads <br> Norway</p>
+		</div>
+		<div class="contentPortrait"></div>
 	</div>
-	<div class="contentBox" style="grid-area: boxL;">
-		<p style="font-size:75%">${largeInfo}</p>
-	</div>
-	<div class="contentBox" style="grid-area: boxS;">
-	<p style="float:left;margin-left: 5%">[-] DOB: <br> [-]Name:<br> [-]Location: </p>
-	<p style="float:right; margin-right: 5%">1994 <br> Mads <br> Norway</p>
-	</div>
-	<div class="contentPortrait"></div>
 </div>`;
 
 var footerHTML = `			
