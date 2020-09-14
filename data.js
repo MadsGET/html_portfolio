@@ -8,20 +8,11 @@ const largeInfo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inte
 // Static HTML code
 function getHeader(buttonIndex)
 {
-	return `
-	<div class="header">
-	<div class="headerBackground">
-		<div class="headerContainer">
-			<div class="headerDecoration"></div>
-			<div class="headerButton" onClick="onPageSelection(0, ${buttonIndex[0]})" style="background-image: url(images/buttons/${urlButtonS[buttonIndex[0]]}.png)"></div>
-			<div class="headerButton" onClick="onPageSelection(1, ${buttonIndex[1]})" style="background-image: url(images/buttons/${urlButtonL[buttonIndex[1]]}.png); opacity: 1.0;"></div>
-			<div class="headerButton" onClick="onPageSelection(2, ${buttonIndex[2]})" style="background-image: url(images/buttons/${urlButtonS[buttonIndex[2]]}.png)"></div>
-			<div class="headerDecoration"></div>
-		</div>
-	</div>
-	</div> `
+	return  `<div class="header"></div>` 
+	
 }
 
+// Defunct
 function getContent(index)
 {
 	if (index == 0) {
@@ -33,29 +24,6 @@ function getContent(index)
 	}
 }
 
-var content0HTML =
-`
-	<div class="contentCard"></div>
-` ;
+var content0HTML = `<div class="content"></div>`;
 
-var content1HTML = `	
-<div class="contentBackground">
-	<div class="contentContainer">
-		<div class="contentBox" style="grid-area: boxH; align-items:center; display:flex; overflow:hidden;">
-			<p style="margin: auto; font-size:250%">< Hello World ></p>
-		</div>
-		<div class="contentBox" style="grid-area: boxL;">
-			<p style="font-size:75%">${largeInfo}</p>
-		</div>
-		<div class="contentBox" style="grid-area: boxS;">
-		<p style="float:left;margin-left: 5%">[-] DOB: <br> [-]Name:<br> [-]Location: </p>
-		<p style="float:right; margin-right: 5%">1994 <br> Mads <br> Norway</p>
-		</div>
-		<div class="contentPortrait"></div>
-	</div>
-</div>`;
-
-var footerHTML = `			
-<div class="footer">
-<p style="margin: auto; text-align:center;"> Copyright 2020 </p>
-</div>`;
+var footerHTML = `<div class="footer"></div>`;

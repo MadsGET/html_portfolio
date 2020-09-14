@@ -1,0 +1,46 @@
+<svg id="Corner_Marker_Top_Right" data-name="Corner Marker Top Right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 512 64">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        opacity: 0.1;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    </style>
+    <filter id="filter" x="2" y="2.344" width="508.406" height="59.656" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="9" in="SourceAlpha"/>
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite-2" operator="out" in2="blur"/>
+      <feComposite result="composite" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect id="Fill" class="cls-1" x="2" y="2.344" width="508.406" height="59.656"/>
+  <rect id="Line_Bottom" data-name="Line Bottom" class="cls-2" x="2" y="60" width="508" height="2"/>
+  <rect id="Horizontal" class="cls-2" x="494" width="16" height="6"/>
+  <path id="Vertical" class="cls-3" d="M505.87,0.049H512V16h-6.13V0.049Z"/>
+  <rect id="Horizontal-2" data-name="Horizontal" class="cls-2" x="494" y="58" width="16" height="6"/>
+  <rect id="Vertical-2" data-name="Vertical" class="cls-2" x="505.875" y="48" width="6.125" height="15.938"/>
+  <rect id="Horizontal-3" data-name="Horizontal" class="cls-2" x="2" width="16" height="6"/>
+  <rect id="Vertical-3" data-name="Vertical" class="cls-2" y="0.063" width="6.125" height="15.938"/>
+  <rect id="Horizontal-4" data-name="Horizontal" class="cls-2" x="2" y="58" width="16" height="6"/>
+  <rect id="Vertical-4" data-name="Vertical" class="cls-2" y="48" width="6.125" height="15.938"/>
+  <path id="Line_Right" data-name="Line Right" class="cls-4" d="M509,16h1V48h-1V16Z"/>
+  <path id="Line_Left" data-name="Line Left" class="cls-4" d="M2,16H3V48H2V16Z"/>
+  <rect id="Line_Top" data-name="Line Top" class="cls-2" x="2" y="2" width="508" height="2"/>
+</svg>

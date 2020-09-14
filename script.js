@@ -7,9 +7,21 @@ var currentAnimState = 0;
 function drawView()
 {
 	document.getElementById('page').innerHTML = `
-		${getHeader(currentButtonIndex)}	
-		<div class="content ${contentAnimState[currentAnimState]}">${getContent(currentPageIndex)}</div>
-		${footerHTML}	
+		<div class="header">
+			<div class="headerContainer">
+				<object type="image/svg+xml" data="images/headerImage.svg" style="height: 100%; width:100%"></object>
+			</div>
+		</div>
+		<div class="content">
+			<div class="contentContainer">
+
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footerContainer">
+				<object type="image/svg+xml" data="images/footerImage.svg" style="height: 100%; width:100%"></object>
+			</div>
+		</div>
 	`;
 }
 

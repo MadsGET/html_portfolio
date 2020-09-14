@@ -1,0 +1,73 @@
+<svg id="Header_Top" data-name="Header Top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="64" preserveAspectRatio="none" viewBox="0 0 512 64">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.1;
+        filter: url(#filter);
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: 0.5;
+      }
+
+      .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    </style>
+    <filter id="filter" x="0.594" y="2.344" width="508.812" height="59.594" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="9" in="SourceAlpha"/>
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite-2" operator="out" in2="blur"/>
+      <feComposite result="composite" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect id="Fill" class="cls-1" x="0.594" y="2.344" width="508.812" height="59.594"/>
+  <rect id="SideLeft" class="cls-2" x="1" y="16" width="1" height="33"/>
+  <rect id="SideLeft_copy" data-name="SideLeft copy" class="cls-2" x="509" y="16" width="1" height="33"/>
+  <g id="Half_Left" data-name="Half Left">
+    <g id="Main">
+      <path id="Line_Horizontal_Low" data-name="Line Horizontal Low" class="cls-3" d="M-1,2.838V1.224H254.994V2.838H-1Z"/>
+    </g>
+    <g id="End_Decoration" data-name="End Decoration">
+      <path id="Vertical_copy" data-name="Vertical copy" class="cls-4" d="M4.042,4.857H-1V15.38H4.042V4.857Z"/>
+      <path id="Horizontal_copy" data-name="Horizontal copy" class="cls-4" d="M15.187,4.858V-0.008H-1V4.858H15.187Z"/>
+    </g>
+  </g>
+  <g id="Half_Right" data-name="Half Right">
+    <g id="Main-2" data-name="Main">
+      <path id="Line_Horizontal_Low-2" data-name="Line Horizontal Low" class="cls-3" d="M510.988,2.838V1.224H254.994V2.838H510.988Z"/>
+    </g>
+    <g id="End_Decoration-2" data-name="End Decoration">
+      <path id="Vertical" class="cls-4" d="M506.958,4.857H512V15.38h-5.042V4.857Z"/>
+      <path id="Horizontal" class="cls-4" d="M495.813,4.858V-0.008H512V4.858H495.813Z"/>
+    </g>
+  </g>
+  <g id="Half_Left-2" data-name="Half Left">
+    <g id="Main-3" data-name="Main">
+      <path id="Line_Horizontal_Low-3" data-name="Line Horizontal Low" class="cls-3" d="M-1,61.162v1.614H254.994V61.162H-1Z"/>
+    </g>
+    <g id="End_Decoration-3" data-name="End Decoration">
+      <path id="Vertical_copy-2" data-name="Vertical copy" class="cls-4" d="M4.042,59.143H-1V48.62H4.042V59.143Z"/>
+      <path id="Horizontal_copy-2" data-name="Horizontal copy" class="cls-4" d="M15.187,59.142v4.867H-1V59.142H15.187Z"/>
+    </g>
+  </g>
+  <g id="Half_Right-2" data-name="Half Right">
+    <g id="Main-4" data-name="Main">
+      <path id="Line_Horizontal_Low-4" data-name="Line Horizontal Low" class="cls-3" d="M510.988,61.162v1.614H254.994V61.162H510.988Z"/>
+    </g>
+    <g id="End_Decoration-4" data-name="End Decoration">
+      <path id="Vertical-2" data-name="Vertical" class="cls-4" d="M506.958,59.143H512V48.62h-5.042V59.143Z"/>
+      <path id="Horizontal-2" data-name="Horizontal" class="cls-4" d="M495.813,59.142v4.867H512V59.142H495.813Z"/>
+    </g>
+  </g>
+</svg>
