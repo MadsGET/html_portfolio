@@ -8,19 +8,11 @@ function drawView()
 {
 	document.getElementById('page').innerHTML = `
 		<div class="header">
-			<div class="headerContainer">
-				<object type="image/svg+xml" data="images/headerImage.svg" style="height: 100%; width:100%"></object>
-			</div>
 		</div>
 		<div class="content">
-			<div class="contentContainer">
-
-			</div>
+			<div class="contentContainer"><div class="content1HTML"></div></div>
 		</div>
 		<div class="footer">
-			<div class="footerContainer">
-				<object type="image/svg+xml" data="images/footerImage.svg" style="height: 100%; width:100%"></object>
-			</div>
 		</div>
 	`;
 }

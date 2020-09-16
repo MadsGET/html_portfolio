@@ -1,0 +1,18 @@
+<svg id="Decoration_Block_Right" data-name="Decoration Block Right" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 128 44">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="End_block_right" data-name="End block right" class="cls-1" d="M98.178,0h29.834L113.483,44.2h-15.3V0Z"/>
+  <rect id="Right_Block" data-name="Right Block" class="cls-2" x="77" width="15" height="44"/>
+  <rect id="Middle_Block" data-name="Middle Block" class="cls-2" x="57" width="15" height="44"/>
+  <rect id="Left_Block" data-name="Left Block" class="cls-2" x="36" width="15" height="44"/>
+  <path id="End_block_left" data-name="End block left" class="cls-1" d="M29.825,0H-0.008L14.52,44.2h15.3V0Z"/>
+</svg>
