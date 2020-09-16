@@ -8,11 +8,27 @@ function drawView()
 {
 	document.getElementById('page').innerHTML = `
 		<div class="header">
-			<div class="headerDecoration"></div>
-			<div class="headerButtonL"></div>
-			<div class="headerButtonM"></div>
-			<div class="headerButtonR"></div>
-			<div class="headerDecoration"></div>
+			<div class="headerContainer">
+				
+				<div class="headerDecoration" style="grid-area:'decorationL'">
+					<div class="decorationImage"><div class="decorationMirror" style="opacity:0.5"></div></div>
+				</div>
+				<div class="headerContainerL">
+					<div class="headerButton" style="background-image: url('images/button_Contact.svg');"></div>
+					<div class="headerButtonImage"></div>
+				</div>		
+				<div class="headerContainerM">
+					<div class="headerButton" style="background-image: url('images/button_About.svg');	background-size: 80% 70%; opacity:1.0;"></div>
+					<div class="headerButtonImage"></div>
+				</div>
+				<div class="headerContainerR">
+					<div class="headerButton" style="background-image: url('images/button_Portfolio.svg');"></div>
+					<div class="headerButtonImage"></div>
+				</div>
+				<div class="headerDecoration" style="grid-area:'decorationR';">
+					<div class="decorationImage"></div>
+				</div>
+			</div>
 		</div>
 		<div class="content">
 			<div class="contentContainer"><div class="content1HTML"></div></div>

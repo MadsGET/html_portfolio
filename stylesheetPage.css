@@ -1,5 +1,7 @@
 ﻿body
 {	
+	color:white;
+	font-size:16px;
 	grid-column: 1;
 	grid-row: 1;
 	display: grid;
@@ -26,18 +28,63 @@
 	background-image: url('images/smokeEffect.png');
 }
 
-#page
+#page, .mirror
 {
-	/*background-color: rgba(255, 0, 0, 0.1); Enable this to see grid changes*/
-	height: 90vh;
-	width: 75vw;
+	grid-column:1;
+	grid-row:1;
 	min-width: 256px;
 	min-height: 256px;
+}
+
+#page
+{
+	z-index: 1;
+	height: 90vh;
+	width: 75vw;
 	margin: 5vh auto;
+	/*background-color: rgba(255, 0, 0, 0.1); Enable this to see grid changes*/
 	grid-template-areas: 'header' 'content' 'footer';
 	grid-template-rows: 15% 77.5% 7.5%;
 	grid-template-columns: 100%;
 	display: grid;
+}
+
+.mirror
+{
+	height: 100vh;
+	width: 100vw;
+	margin:0;
+	z-index: 0;
+	grid-template-areas: 'headerMirror' 'contentMirror' 'footerMirror';
+	grid-template-rows: 22.5% 1fr 18.5%;
+	grid-template-columns: 100%;
+	display: grid;
+}
+
+.headerMirror
+{
+	opacity: 0.05;
+	background-image: url('images/headerImage.svg');
+	background-size: 75% 70%;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.footerMirror
+{
+	opacity:0.1;
+	background-image: url('images/footerImage.svg');
+	background-size: 77.5% 40%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+.headerMirror, .contentMirror, .footerMirror
+{
+	/*
+	box-sizing: border-box;
+	border: 4px solid black;*/
 }
 
 /*

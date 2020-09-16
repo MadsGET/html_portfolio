@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <image id="Background" width="4" height="64" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAABACAYAAAA9ONYEAAAAIElEQVQ4jWOU0rf4z4AEmBjQwKjAqMCowKgAFgEGBgYAb40CAPlDDQ0AAAAASUVORK5CYII="/>
+  <rect class="cls-1" width="4" height="64"/>
+</svg>
