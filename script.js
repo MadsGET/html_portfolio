@@ -8,6 +8,11 @@ function drawView()
 {
 	document.getElementById('page').innerHTML = `
 		<div class="header">
+			<div class="headerDecoration"></div>
+			<div class="headerButtonL"></div>
+			<div class="headerButtonM"></div>
+			<div class="headerButtonR"></div>
+			<div class="headerDecoration"></div>
 		</div>
 		<div class="content">
 			<div class="contentContainer"><div class="content1HTML"></div></div>
