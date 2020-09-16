@@ -80,3 +80,19 @@
 	box-sizing: border-box;
 	border: 1px solid black;
 }*/
+
+
+/*Width less than 512px*/
+@media screen and (max-width: 512px)
+{
+	.headerContainer
+	{
+		grid-template-areas: 'decorationL headerButtonL headerButtonL headerButtonR decorationR';
+		grid-template-columns: 0 1fr 1fr 1fr 0;
+	}
+
+	.decorationImage
+	{
+		display: none;
+	}
+}
