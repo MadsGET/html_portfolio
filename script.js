@@ -8,7 +8,9 @@ function drawView()
 	document.getElementById('page').innerHTML = `
 		${getHeader(currentButtonIndex)}
 		<div class="content">
-			<div class="contentContainer"></div>
+			<div class="contentContainer">
+				${content0HTML}
+			</div>
 		</div>
 		<div class="footer">
 		</div>
