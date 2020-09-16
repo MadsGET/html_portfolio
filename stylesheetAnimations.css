@@ -1,4 +1,26 @@
 
+.animMirrorEffect
+{
+	animation-name: animMirror;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction:alternate;
+}
+
+@keyframes animMirror
+{
+	0%
+	{
+		opacity: 0.1;
+	}
+
+	100%
+	{
+		opacity:0.01;
+	}
+}
+
 .animSmokeEffect
 {
 	animation-name: animSmokeEffect;
@@ -17,7 +39,7 @@
 
 	50%
 	{
-		opacity:0.05;
+		opacity:0.075;
 	}
 
 	100%

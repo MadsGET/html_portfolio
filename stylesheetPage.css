@@ -17,11 +17,10 @@
 
 .bodyImage
 {
-	opacity: 0;
 	grid-column: 1;
 	grid-row: 1;
-	height: 1fr;
-	width: 1fr;
+	height: 100vh;
+	width: 100vw;
 	background-size:cover;
 	background-repeat:repeat;
 	background-position: center;
@@ -30,8 +29,8 @@
 
 #page, .mirror
 {
-	grid-column:1;
-	grid-row:1;
+	grid-column: 1;
+	grid-row: 1;
 	min-width: 256px;
 	min-height: 256px;
 }
@@ -63,7 +62,6 @@
 
 .headerMirror
 {
-	opacity: 0.05;
 	background-image: url('images/headerImage.svg');
 	background-size: 75% 70%;
 	background-position: center bottom;
@@ -72,7 +70,6 @@
 
 .footerMirror
 {
-	opacity:0.1;
 	background-image: url('images/footerImage.svg');
 	background-size: 77.5% 40%;
 	background-position: center;
