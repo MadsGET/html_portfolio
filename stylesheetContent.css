@@ -56,32 +56,37 @@
 {
 	grid-template-areas: 'textL textR' 'bottomText bottomText';
 	grid-template-columns: 1.5fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 2fr 1fr;
 	display: grid;
 }
 
 .textL
 {
-	padding-top: 2.5%;
-	text-align:left;
-	background-color: red;
+	margin: auto;
+	width: 90%;
+	text-align: left;
+	/*background-color: red;*/
 }
 
 .textR
 {
-	padding-top:2.5%;
-	text-align:center;
-	background-color: blue;
+	margin: auto;
+	width: 80%;
+	text-align: right;
+	/*background-color: blue;*/
 }
 .textB
 {
-	grid-area:bottomText;
-	width:100%;
-	background-color: mediumpurple;
+	grid-area: bottomText;
+	margin: auto;
+	font-size: 80%;
+	text-align: center;
+	/*background-color: mediumpurple;*/
 }
 
-/* Text scaling for lower resolutions. (Min desktop support should be:1024x768)*/
-@media screen and (max-width: 768px)
+/* Text scaling for lower resolutions. (Compact Mode Resolution:512x768)*/
+/* While height is less and width is within bounds its not working!*/
+@media screen and (max-width: 768px), screen and (max-aspect-ratio: 1/1) and (min-height: 512px)
 {
 	.decoratedBox
 	{
@@ -93,7 +98,7 @@
 
 
 /* On vertical/compact mode */
-@media screen and (max-aspect-ratio: 1/1), screen and (max-width: 512px), screen and (max-height: 512px)
+@media screen and (max-aspect-ratio: 1/1), screen and (max-width: 768px), screen and (max-height: 512px)
 {
 
 

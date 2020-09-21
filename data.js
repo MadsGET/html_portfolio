@@ -3,6 +3,9 @@ const pageTitle = ['Contact', 'About', 'Portfolio'];
 
 // Static text fields
 const largeInfo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend quis lorem molestie sagittis. Donec tempus, purus sit amet blandit scelerisque, tellus quam dignissim orci, quis tempus mi tortor sed urna. Vestibulum eget dolor quis magna efficitur tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Nulla facilisi. Morbi et orci eget eros congue fermentum. Aenean interdum luctus mi, ut maximus erat ultrices vitae. Aenean blandit tempor ornare. Duis nisi dolor, condimentum quis dolor vitae, volutpat bibendum odio. Quisque congue nulla odio. In ultricies, eros eu condimentum dignissim, nisl dui ultrices ligula, vitae blandit risus dui dictum dolor. Class aptent taciti sociosquo.`
+const smallInfoL = `[-]Name: <br> [-]DOB: <br> [-]Location: <br> `;
+const smallInfoR = `Mads <br> 1994 <br> Norway`;
+const smallInfoB = `Experience: C#, Javascript, HTML, CSS, Photoshop, Unity3D, Blender.`;
 
 // Static HTML code
 function getHeader(buttonIndex)
@@ -52,9 +55,9 @@ var content0HTML = `
 			<div class="decoratedBox" style="grid-area:contentH; background-Image:url('images/contentHeadText.svg'); min-height: 32px"></div>
 			<div class="decoratedBox" style="grid-area:contentL; overflow:auto; padding:8px;">${largeInfo}</div>
 			<div class="decoratedBox textGrid" style="grid-area:contentS">
-				<div class="textL">[-] <br> [-] <br> [-]</div>
-				<div class="textR"></div>
-				<div class="textB"></div>
+				<div class="textL">${smallInfoL}</div>
+				<div class="textR">${smallInfoR}</div>
+				<div class="textB">${smallInfoB}</div>
 			</div>
 			<div class="portrait"></div>
 		</div>
