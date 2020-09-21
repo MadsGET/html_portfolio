@@ -49,10 +49,10 @@ function getContent(index)
 var content0HTML = `
 	<div class="content0HTML">
 		<div class="content0Grid">
-			<div class="decoratedBox" style="grid-area:contentH; background-Image:url('images/contentHeadText.svg');"></div>
+			<div class="decoratedBox" style="grid-area:contentH; background-Image:url('images/contentHeadText.svg'); min-height: 32px"></div>
 			<div class="decoratedBox" style="grid-area:contentL; overflow:auto; padding:8px;">${largeInfo}</div>
 			<div class="decoratedBox textGrid" style="grid-area:contentS">
-				<div class="textL"></div>
+				<div class="textL">[-] <br> [-] <br> [-]</div>
 				<div class="textR"></div>
 				<div class="textB"></div>
 			</div>

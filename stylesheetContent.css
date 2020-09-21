@@ -17,8 +17,9 @@
 	width: 100%;
 	background-image: url('images/contentBox1_Image.svg');
 	background-size: 100% 100%;
-	align-items:center;
-	display:flex;
+	align-items: center;
+	display: flex;
+	min-height: 128px;
 }
 
 .content0Grid
@@ -35,7 +36,7 @@
 
 .decoratedBox
 {
-	font-size:100%;
+	font-size:1vw;
 	box-sizing: border-box;
 	background-color: rgba(255, 255, 255, 0.05);
 	border: 4px solid rgba(255, 255, 255, 0.1);
@@ -79,9 +80,23 @@
 	background-color: mediumpurple;
 }
 
-/* On vertical mode */
-@media screen and (max-aspect-ratio: 1/1)
+/* Text scaling for lower resolutions. (Min desktop support should be:1024x768)*/
+@media screen and (max-width: 768px)
 {
+	.decoratedBox
+	{
+		color: red;
+		text-decoration: underline;
+		font-size: 1rem;
+	}
+}
+
+
+/* On vertical/compact mode */
+@media screen and (max-aspect-ratio: 1/1), screen and (max-width: 512px), screen and (max-height: 512px)
+{
+
+
 	.contentContainer
 	{
 		width: 100%;
