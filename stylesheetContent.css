@@ -79,6 +79,7 @@
 	background-color: mediumpurple;
 }
 
+/* On vertical mode */
 @media screen and (max-aspect-ratio: 1/1)
 {
 	.contentContainer
@@ -86,33 +87,21 @@
 		width: 100%;
 		height: 75%;
 	}
-}
 
-/*
-.content
-{
-	background-color:aquamarine;
-	background-image: url('images/contentBox1_Image.svg');
-	background-size: 100% 100%;
-	height: 60vh;
-	width: 55vw;
-	margin:auto;
-	margin-top:7.5vh;
-}
-
-
-@media screen and (max-aspect-ratio: 1/1)
-{
-	USE TO TEST ASPECT RATIO DETECTION
-	div
+	.content0Grid
 	{
-		background-color:red;
+		grid-template-areas: 'contentH contentH contentH' 'contentL contentL contentL' 'contentL contentL contentL';
 	}
 
-	.content
+	.content0HTML
 	{
-		margin: 15vh auto;
-		height: 35vh;
+		background-image: linear-gradient(rgba(255,255,255, 0.025), rgba(0,0,0, 0.35), rgba(255,255,255, 0.025));
+		background-color: rgba(255,255,255, 0.05);
+		border: 0.5vw solid white;
+	}
+
+	.textGrid, .portrait
+	{
+		display: none;
 	}
 }
-*/
