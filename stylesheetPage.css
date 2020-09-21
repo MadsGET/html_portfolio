@@ -1,7 +1,7 @@
 ﻿body
 {	
 	color:white;
-	font-size:1rem;
+	font-size:1vw;
 	grid-column: 1;
 	grid-row: 1;
 	display: grid;
@@ -102,6 +102,16 @@
 	margin: auto;
 	margin-top: 7.5vh;
 	margin-bottom:0;*/
+}
+
+@media screen and (max-width: 768px)
+{
+	body
+	{
+		color:snow;
+		text-decoration:underline;
+		font-size: 1rem;
+	}
 }
 
 /*Phone aspect ratio || vertical screen*/

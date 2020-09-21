@@ -50,10 +50,10 @@ var content0HTML = `
 	<div class="content0HTML">
 		<div class="content0Grid">
 			<div class="decoratedBox" style="grid-area:contentH; background-Image:url('images/contentHeadText.svg');"></div>
-			<div class="decoratedBox" style="grid-area:contentL"></div>
+			<div class="decoratedBox" style="grid-area:contentL; overflow:auto; padding:8px;">${largeInfo}</div>
 			<div class="decoratedBox textGrid" style="grid-area:contentS">
-				<div class="textL">[-] Name: <br> [-] DOB: 1994 <br> [-] Location: </div>
-				<div class="textR"> Mads <br> 1994 <br> Norway</div>
+				<div class="textL"></div>
+				<div class="textR"></div>
 				<div class="textB"></div>
 			</div>
 			<div class="portrait"></div>
