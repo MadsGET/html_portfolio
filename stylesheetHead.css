@@ -5,16 +5,47 @@
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-size: 97.5% 90%;
+
 }
 
 .buttonArea
 {
-	/* Size */
-	width:40%;
-	margin:auto;
-	float:right;
+	/* Debug 
+	background-color: rgba(128, 255, 128, 0.25);*/
 
-	font-size:2vw;
-	text-align:center;
-	background-color: rgba(128, 255, 128, 0.1);
+	/* Size */
+	height:80%;
+	width:35%;
+	float:right;
+	margin:0;
+	margin-right:4.6vw;
+
+	/* Grid */
+	grid-template-areas: 'buttonL buttonM buttonR';
+	grid-template-columns: 0.4fr 0.1fr 0.5fr;
+	grid-template-rows: 100%;
+	display:grid;
+}
+
+.headerButton
+{
+	/* Debug 
+	box-sizing: border-box;
+	border: 1px solid black;*/
+
+	/* Flex */
+	align-items: center;
+	display: flex;
+}
+
+.headerButton:hover
+{
+	opacity:1.0;
+}
+
+.headerButtonText
+{
+	font-size: 2vw; /* Vertical view mode base this on view height instead*/
+	margin:auto;
+	margin-bottom:0;
 }

@@ -8,9 +8,9 @@ function drawView()
 	document.getElementById('page').innerHTML = `
 		<div class="header">
 			<div class="buttonArea">
-				ABOUT
-				PORTFOLIO
-				CONTACT
+				<div class="headerButton" style="grid-area: buttonL;"><div class="headerButtonText" ${(currentPageIndex == 1) ? '' : 'style="opacity:0.5"'}>ABOUT</div></div>
+				<div class="headerButton" style="grid-area: buttonM;"><div class="headerButtonText" ${(currentPageIndex == 2) ? '' : 'style="opacity:0.5"'}>PORTFOLIO</div></div>
+				<div class="headerButton" style="grid-area: buttonR;"><div class="headerButtonText" ${(currentPageIndex == 3) ? '' : 'style="opacity:0.5"'}>CONTACT</div></div>
 			</div>
 		</div>
 		<div class="content">
