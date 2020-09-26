@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1249 28">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff;stroke: #ffffff } 
+	</style>
+	<path fill-rule="evenodd" class="shp0" d="M1249 24.98L1249 28L697 28L697 28L412 28L384.82 -0.15L458 -0.15L458 -0.17L583 -0.17L608 14.92L673 14.92L691.52 25.01L1249 24.98ZM26 28L-1 -0.15L257.82 -0.15L285 28L26 28ZM318.82 -0.15L346 28L293 28L265.82 -0.15L318.82 -0.15ZM376.82 -0.15L404 28L354 28L326.82 -0.15L376.82 -0.15Z" />
+</svg>

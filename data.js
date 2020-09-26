@@ -11,3 +11,7 @@ The result is that over the years I have accumulated a wide skillset that enable
 applications and websites. Since I can master both the visual and programming side of things, the question I will pose to you is this;
 Why hire one person for each job, why not hire one jack of all trades instead?`
 
+var aboutContent =
+`
+	<div class="aboutContent"></div>
+`;

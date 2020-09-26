@@ -1,0 +1,46 @@
+.content
+{
+	/* Size */
+	height:100%;
+	width:100%;
+	margin:0;
+
+	/* Flex */
+	align-content: center;
+	display:flex;
+}
+
+.contentContainer
+{
+	/* Size */
+	height: 80%;
+	width: 90%;
+	margin: auto;
+	
+	/* Grid */
+	grid-template-areas: 'contentHead' 'contentArea';
+	grid-template-rows: 1fr 8fr;
+	grid-template-columns: 1fr;
+	display: grid;
+
+	background-color: rgba(0, 128, 255, 0.1);
+}
+
+.contentHead
+{
+
+}
+
+.contentArea
+{
+	/* Size */
+	height: 100%;
+	width: 100%;
+	margin: auto;
+
+	/* Background */
+	background-image: url('images/aboutFrame.svg');
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}

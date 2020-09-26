@@ -6,7 +6,21 @@ var currentButtonIndex = [0, 1, 2];
 function drawView()
 {
 	document.getElementById('page').innerHTML = `
-		
+		<div class="header">
+			<div class="buttonArea">
+				ABOUT
+				PORTFOLIO
+				CONTACT
+			</div>
+		</div>
+		<div class="content">
+			<div class="contentContainer">
+				<div class="contentHead"> < Hello World ></div>
+				<div class="contentArea"></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
 	`;
 }
 

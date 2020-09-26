@@ -1,0 +1,20 @@
+.header
+{
+	/* Background */
+	background-image: url('images/headerImage.svg');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: 97.5% 90%;
+}
+
+.buttonArea
+{
+	/* Size */
+	width:40%;
+	margin:auto;
+	float:right;
+
+	font-size:2vw;
+	text-align:center;
+	background-color: rgba(128, 255, 128, 0.1);
+}
