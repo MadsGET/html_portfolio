@@ -1,0 +1,11 @@
+Text Fields
+[-] Album Name	        : Game Design
+[-] Picture name + index: Picture 3/14
+[-] Picture Description : Some UI elements in a fantasy game (maybe hidden)?
+
+Buttons
+Forward Button
+Backwards Button
+Picture display
+Album display
+Fullscreen display (On click picture?)
