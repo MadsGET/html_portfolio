@@ -1,6 +1,6 @@
 // Model
 var currentPageIndex = 1;
-var languageSelection = 0; // 0#ENG 1#NOR
+var languageSelection = 0; // 0# ENG 1# NOR
 var currentButtonIndex = [0, 1, 2]; //Defunct
 
 // View
@@ -10,17 +10,14 @@ function drawView()
 		${getHeader(currentPageIndex, languageSelection)}
 		<div class="content">
 			<div class="contentContainer">
-				<div class="contentHead"> < Hello World ></div>
-				<div class="contentArea"></div>
+				<div class="contentHead"><p class="contentTitle" >${aboutTitle[languageSelection]}<p></div>
+				<div class="contentArea">
+					<p class="textArea">${largeInfo}</p>
+				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="footerContent">
-				<div class="footerContainer" style="grid-area: footerContainerL;"><p class="footerText" style="margin-left:0;"> ${footerText[0][languageSelection]}<p></div>
-				<div class="footerContainer toggleButton toggleButton${(languageSelection == 0) ? 'On' : 'Off'}" style="grid-area: footerContainerM;" onclick="languageSelection = (languageSelection == 0) ? 1 : 0; drawView();"></div>
-				<div class="footerContainer" style="grid-area: footerContainerR;"><p class="footerText" style="margin-right:0;">${footerText[1][languageSelection]}<p></div>
-			</div>
-		</div>
+
+		${getFooter(languageSelection)}
 	`;
 }
 

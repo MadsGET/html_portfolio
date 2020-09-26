@@ -1,6 +1,7 @@
 const pageTitle = ['Contact', 'About', 'Portfolio']; // MÅ switches
-const headerText = [['About', 'Om Meg'], ['Portfolio', 'Portof&oslash;lje'], ['Contact', 'Kontakt']]
-const footerText = [['Language: English', 'Spr&aring;k: Norsk'], ['Copyright 2020', 'Opphavsrett 2020']]
+const headerText = [['ABOUT', 'Om Meg'], ['PORTFOLIO', 'Portof&oslash;lje'], ['CONTACT', 'Kontakt']];
+const aboutTitle = ['< Hello World >', '< Hallo Verden >'];
+const footerText = [['Language: English', 'Spr&aring;k: Norsk'], ['Copyright 2020', 'Opphavsrett 2020']];
 
 // Static text fields
 const largeInfo = `Welcome to my portfolio site, I to want first thank you for taking an into intrest in me and my website.
@@ -18,12 +19,25 @@ function getHeader(pageIndex, languageIndex)
 
 		<div class="header">
 			<div class="buttonArea">
-				<div class="headerButton" style="grid-area: buttonL;"><div class="headerButtonText ${(pageIndex != 1) ? 'deactivatedButton' : ''}">  ${headerText[0][languageIndex]}</div></div>
-				<div class="headerButton" style="grid-area: buttonM;"><div class="headerButtonText ${(pageIndex != 2) ? 'deactivatedButton' : ''}""> ${headerText[1][languageIndex]}</div></div>
-				<div class="headerButton" style="grid-area: buttonR;"><div class="headerButtonText ${(pageIndex != 3) ? 'deactivatedButton' : ''}""> ${headerText[2][languageIndex]}</div></div>
+				<div class="headerButton" style="grid-area: buttonL;"><div class="headerButtonText ${(pageIndex != 1) ? 'deactivatedButton' : ''}" style="margin-right:0;">${headerText[0][languageIndex]}</div></div>
+				<div class="headerButton" style="grid-area: buttonM;"><div class="headerButtonText ${(pageIndex != 2) ? 'deactivatedButton' : ''}"> ${headerText[1][languageIndex]}</div></div>
+				<div class="headerButton" style="grid-area: buttonR;"><div class="headerButtonText ${(pageIndex != 3) ? 'deactivatedButton' : ''}" style="margin-left:0;"> ${headerText[2][languageIndex]}</div></div>
 			</div>
 		</div>
 	`;
+}
+
+function getFooter(languageIndex)
+{
+	return `
+		<div class="footer">
+			<div class="footerContent">
+				<div class="footerContainer" style="grid-area: footerContainerL;"><p class="footerText" style="margin-left:0;"> ${footerText[0][languageIndex]}<p></div>
+				<div class="footerContainer toggleButton toggleButton${(languageIndex == 0) ? 'On' : 'Off'}" style="grid-area: footerContainerM;" onclick="languageSelection = (languageSelection == 0) ? 1 : 0; drawView();"></div>
+				<div class="footerContainer" style="grid-area: footerContainerR;"><p class="footerText" style="margin-right:0;">${footerText[1][languageIndex]}<p></div>
+			</div>
+		</div>
+	`
 }
 
 var aboutContent =

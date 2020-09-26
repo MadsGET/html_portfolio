@@ -1,17 +1,19 @@
 .content
 {
 	/* Size */
-	height:100%;
-	width:100%;
-	margin:0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
 
 	/* Flex */
 	align-content: center;
-	display:flex;
+	display: flex;
 }
 
 .contentContainer
 {
+	position:relative;
+
 	/* Size */
 	height: 80%;
 	width: 90%;
@@ -22,13 +24,35 @@
 	grid-template-rows: 1fr 8fr;
 	grid-template-columns: 1fr;
 	display: grid;
-
-	background-color: rgba(0, 128, 255, 0.1);
 }
+/*
+.contentOverlay
+{
+	position: absolute;
+	height: 99.5%;
+	width: 50%;
+	left: 50%;
+
+	background-image: url('images/portrait.png');
+	background-size: 90% 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}*/
 
 .contentHead
 {
+	/* Flex */
+	align-items: center;
+	display: flex;
+}
 
+.contentTitle
+{
+	margin:auto;
+	margin-left:11.25vw; /* Må flyttes senere for forskjellige versjoner*/
+	margin-bottom:0;
+	font-size:400%;
+	text-shadow: 0px 3px rgba(0, 0, 0, 0.75);
 }
 
 .contentArea
@@ -37,10 +61,24 @@
 	height: 100%;
 	width: 100%;
 	margin: auto;
+	
+	min-height:0;
 
 	/* Background */
-	background-image: url('images/aboutFrame.svg');
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+	background-image: url('images/contentGuide.svg'), url('images/contentGuide.svg');
+	background-position: center top, center bottom;
+	background-repeat: repeat-x;
+}
+
+.textArea
+{
+	margin: 3px auto;
+	height:100%;
+	width:35%;
+	padding:8px;
+	font-size:150%;
+	box-sizing: border-box;
+	border: 2px solid black;
+	overflow:auto;
+	text-overflow:ellipsis;
 }
