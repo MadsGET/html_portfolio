@@ -22,7 +22,8 @@
 
 	/* Grid */
 	grid-template-areas: 'buttonL buttonM buttonR';
-	grid-template-columns: 0.4fr 0.1fr 0.5fr;
+	grid-template-columns: auto auto auto;
+	/*	grid-template-columns: 0.4fr 0.1fr 0.5fr;*/
 	grid-template-rows: 100%;
 	display:grid;
 }
@@ -55,7 +56,7 @@
 
 .headerButtonText
 {
-	font-size: 2vw; /* Vertical view mode base this on view height instead*/
+	font-size: 200%;
 	margin: auto;
 	margin-bottom: 0;
 }

@@ -15,7 +15,7 @@
 {
 	/* Size */
 	height:100%;
-	width:50%;
+	width:45%;
 	margin:auto;
 
 	/* Grid */
@@ -24,40 +24,52 @@
 	grid-template-rows: 1fr;
 	display:grid;
 
-	background-color:rgba(128, 255, 128, 0.25);
+	/* Debug 
+	background-color:rgba(128, 255, 128, 0.25);*/
 }
 
 .footerContainer
 {
+	/* Debug 
 	box-sizing: border-box;
-	border: 1px solid black;
+	border: 1px solid black;*/
 
 	/* Flex */
 	align-items:center;
 	display:flex;
 }
 
-.toggleButtonOn
+.toggleButton
 {
-	background-image: url('images/toggleButton_On.svg');
-	background-position:center;
+	/* Size */
+	min-width: 48px;
+	min-height: 16px;
+
+	/* Background */
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 40% 50%;
-	min-width:48px;
-	min-height:16px;
+}
+
+.toggleButtonOn
+{
+	/* Background Image */
+	background-image: url('images/toggleButton_On.svg');
+
 }
 
 .toggleButtonOff
 {
+	/* Background Image */
 	background-image: url('images/toggleButton_Off.svg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 40% 50%;
-	min-width: 48px;
-	min-height: 16px;
 }
 
 .footerText
 {
-	margin:auto;
+	/* Size */
+	margin: auto;
+
+	/* Font */
+	font-size: 100%;
+	opacity: 0.75;
 }

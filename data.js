@@ -1,4 +1,6 @@
-const pageTitle = ['Contact', 'About', 'Portfolio'];
+const pageTitle = ['Contact', 'About', 'Portfolio']; // MÅ switches
+const headerText = [['About', 'Om Meg'], ['Portfolio', 'Portof&oslash;lje'], ['Contact', 'Kontakt']]
+const footerText = [['Language: English', 'Spr&aring;k: Norsk'], ['Copyright 2020', 'Opphavsrett 2020']]
 
 // Static text fields
 const largeInfo = `Welcome to my portfolio site, I to want first thank you for taking an into intrest in me and my website.
@@ -10,15 +12,15 @@ The result is that over the years I have accumulated a wide skillset that enable
 applications and websites. Since I can master both the visual and programming side of things, the question I will pose to you is this;
 Why hire one person for each job, why not hire one jack of all trades instead?`
 
-function getHeader(pageIndex)
+function getHeader(pageIndex, languageIndex)
 {
 	return ` 
 
 		<div class="header">
 			<div class="buttonArea">
-				<div class="headerButton" style="grid-area: buttonL;"><div class="headerButtonText ${(pageIndex != 1) ? 'deactivatedButton' : ''}">ABOUT</div></div>
-				<div class="headerButton" style="grid-area: buttonM;"><div class="headerButtonText ${(pageIndex != 2) ? 'deactivatedButton' : ''}"">PORTFOLIO</div></div>
-				<div class="headerButton" style="grid-area: buttonR;"><div class="headerButtonText ${(pageIndex != 3) ? 'deactivatedButton' : ''}"">CONTACT</div></div>
+				<div class="headerButton" style="grid-area: buttonL;"><div class="headerButtonText ${(pageIndex != 1) ? 'deactivatedButton' : ''}">  ${headerText[0][languageIndex]}</div></div>
+				<div class="headerButton" style="grid-area: buttonM;"><div class="headerButtonText ${(pageIndex != 2) ? 'deactivatedButton' : ''}""> ${headerText[1][languageIndex]}</div></div>
+				<div class="headerButton" style="grid-area: buttonR;"><div class="headerButtonText ${(pageIndex != 3) ? 'deactivatedButton' : ''}""> ${headerText[2][languageIndex]}</div></div>
 			</div>
 		</div>
 	`;
