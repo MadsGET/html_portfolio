@@ -35,15 +35,6 @@
 	display:grid;
 }
 
-.footer
-{
-	background-image: url('images/footerImage.svg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 95% 100%;
-}
-
-
 /*
 .header, .content, .footer
 {

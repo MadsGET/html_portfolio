@@ -1,0 +1,63 @@
+.footer
+{
+	/* Background Image */
+	background-image: url('images/footerImage.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 95% 100%;
+
+	/* Flex */
+	align-items:center;
+	display:flex;
+}
+
+.footerContent
+{
+	/* Size */
+	height:100%;
+	width:50%;
+	margin:auto;
+
+	/* Grid */
+	grid-template-areas: 'footerContainerL footerContainerM footerContainerR';
+	grid-template-columns: 1fr 0.5fr 1fr;
+	grid-template-rows: 1fr;
+	display:grid;
+
+	background-color:rgba(128, 255, 128, 0.25);
+}
+
+.footerContainer
+{
+	box-sizing: border-box;
+	border: 1px solid black;
+
+	/* Flex */
+	align-items:center;
+	display:flex;
+}
+
+.toggleButtonOn
+{
+	background-image: url('images/toggleButton_On.svg');
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: 40% 50%;
+	min-width:48px;
+	min-height:16px;
+}
+
+.toggleButtonOff
+{
+	background-image: url('images/toggleButton_Off.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40% 50%;
+	min-width: 48px;
+	min-height: 16px;
+}
+
+.footerText
+{
+	margin:auto;
+}

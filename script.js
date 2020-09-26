@@ -1,18 +1,12 @@
 // Model
 var currentPageIndex = 1;
-var currentButtonIndex = [0, 1, 2];
+var currentButtonIndex = [0, 1, 2]; //Defunct
 
 // View
 function drawView()
 {
 	document.getElementById('page').innerHTML = `
-		<div class="header">
-			<div class="buttonArea">
-				<div class="headerButton" style="grid-area: buttonL;"><div class="headerButtonText" ${(currentPageIndex == 1) ? '' : 'style="opacity:0.5"'}>ABOUT</div></div>
-				<div class="headerButton" style="grid-area: buttonM;"><div class="headerButtonText" ${(currentPageIndex == 2) ? '' : 'style="opacity:0.5"'}>PORTFOLIO</div></div>
-				<div class="headerButton" style="grid-area: buttonR;"><div class="headerButtonText" ${(currentPageIndex == 3) ? '' : 'style="opacity:0.5"'}>CONTACT</div></div>
-			</div>
-		</div>
+		${getHeader(currentPageIndex)}
 		<div class="content">
 			<div class="contentContainer">
 				<div class="contentHead"> < Hello World ></div>
@@ -20,6 +14,11 @@ function drawView()
 			</div>
 		</div>
 		<div class="footer">
+			<div class="footerContent">
+				<div class="footerContainer" style="grid-area: footerContainerL;"><p class="footerText"> Language: English<p></div>
+				<div class="footerContainer toggleButtonOn" style="grid-area: footerContainerM;"></div>
+				<div class="footerContainer" style="grid-area: footerContainerR;"><p class="footerText">Copyright 2020<p></div>
+			</div>
 		</div>
 	`;
 }

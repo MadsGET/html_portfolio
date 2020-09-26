@@ -1,4 +1,3 @@
-const buttonSrc = ["url('images/button_Contact.svg')", "url('images/button_About.svg')", "url('images/button_Portfolio.svg')"]; // Must change.
 const pageTitle = ['Contact', 'About', 'Portfolio'];
 
 // Static text fields
@@ -10,6 +9,20 @@ From building my own computer to creating video game assets such as 3D models an
 The result is that over the years I have accumulated a wide skillset that enables me to rapidly create prototypes of games, 
 applications and websites. Since I can master both the visual and programming side of things, the question I will pose to you is this;
 Why hire one person for each job, why not hire one jack of all trades instead?`
+
+function getHeader(pageIndex)
+{
+	return ` 
+
+		<div class="header">
+			<div class="buttonArea">
+				<div class="headerButton" style="grid-area: buttonL;"><div class="headerButtonText ${(pageIndex != 1) ? 'deactivatedButton' : ''}">ABOUT</div></div>
+				<div class="headerButton" style="grid-area: buttonM;"><div class="headerButtonText ${(pageIndex != 2) ? 'deactivatedButton' : ''}"">PORTFOLIO</div></div>
+				<div class="headerButton" style="grid-area: buttonR;"><div class="headerButtonText ${(pageIndex != 3) ? 'deactivatedButton' : ''}"">CONTACT</div></div>
+			</div>
+		</div>
+	`;
+}
 
 var aboutContent =
 `
