@@ -28,11 +28,12 @@
 
 .contentOverlay
 {
+	/* Transform */
 	position: absolute;
-	height: 99.5%;
+	height: 99.35%;
 	width: 50%;
-	left: 50%;
 
+	/* Background */
 	background-image: url('images/portrait.png');
 	background-size: 90% 100%;
 	background-repeat: no-repeat;
@@ -54,15 +55,14 @@
 	font-size:400%;
 
 	/* Size */
-	width:40%;
+	width:100%;
 
 	/* Position */
 	margin:auto;
-	margin-left:6.75vw;
 	margin-bottom:0;
 }
 
-.contentArea
+.contentBody
 {
 	/* Size */
 	height: 100%;
@@ -70,7 +70,6 @@
 	margin: auto;
 
 	/* Background */
-	background-image: url('images/aboutFrame.svg');
 	background-position: center;
 	background-size:100% 100%;
 	background-repeat: no-repeat;
@@ -98,20 +97,81 @@
 
 .textArea
 {
-	/* Debug */
-	background-color: rgba(255, 255, 255, 0.5);
+	/* Debug 
+	background-color: rgba(255, 255, 255, 0.5);*/
 
 	/* Size */
-	width: 90%;
+	height:90%;
+	width: 96%;
 	margin: auto;
 
 	/* Font */
+	color: rgba(255, 255, 255, 0.8);
 	font-size:16px;
-	font-size: 1.25vw;
+	font-size: 1.4vw;
+	text-align:left;
+	white-space:pre-line;
+	overflow:auto;
+	user-select:text;
+}
+
+.buttonContainer
+{
+	/* Debug
+	background-color:rgba(255, 0, 0, 0.5);*/
+
+	/* Size */
+	height:90%;
+	width:41.75%;
+	margin: auto;
+	margin-right:1.5%;
+
+	/* Grid */
+	grid-template-areas: 'buttonsT' 'buttonsM' 'buttonsB';
+	grid-template-rows: 4fr 1fr 2.5fr;
+	grid-template-columns: 1fr;
+	display:grid;
+}
+
+.borderButton
+{
+	/* Size */
+	margin: auto;
+	
+	/* Text */
+	font-size: 200%;
+
+	/* Border */
+	border: 0.25vw solid snow;
+	border-radius: 0.5vw;
 
 	/* Flex */
-	align-items: center;
+	align-items:center;
 	display:flex;
+}
 
-	overflow:auto;
+.largeRoundButton
+{
+	/* Text */
+	font-size: 250%;
+
+	/* Size */
+	height: 90%;
+	width: 45%;
+}
+
+.mediumButton
+{
+	padding: 0% 3%;
+
+	/* Size */
+	height: 80%;
+	width: 22.5%;
+}
+
+.smallButton
+{
+	/* Size */
+	height: 75%;
+	width: 45%;
 }

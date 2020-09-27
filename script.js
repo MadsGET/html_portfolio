@@ -1,51 +1,40 @@
 // Model
-var currentPageIndex = 1;
-var languageSelection = 0; // 0# ENG 1# NOR
-var currentButtonIndex = [0, 1, 2]; //Defunct
+var currentPageIndex = 2;
+var languageSelection = 1; // 0# Nor 1# Eng
 
 // View
 function drawView()
 {
+	// Draw the view.
 	document.getElementById('page').innerHTML = `
 		${getHeader(currentPageIndex, languageSelection)}
 		<div class="content">
 			<div class="contentContainer">
-				<div class="contentHead">
-					<p class="contentTitle">${aboutTitle[languageSelection]}<p>
-				</div>
-				<div class="contentArea">
-					<div class="contentBox">
-							<div class="textArea">${largeInfo}</div>
-					</div>
-				</div>
-				<div class="contentOverlay"></div>
+				${getContent(currentPageIndex, languageSelection)}
 			</div>
 		</div>
 
 		${getFooter(languageSelection)}
 	`;
+
+	// Update title text.
+	updateTitleText();
 }
 
 // Controller
-function onPageSelection(buttonIndex, pageIndex)
+function onPageSelection(pageIndex)
 {
-	// Guard clause; On same page index.
-	if (currentPageIndex == pageIndex)
+	if (pageIndex != currentPageIndex)
 	{
-		return;
+		// Set page index
+		currentPageIndex = pageIndex;
 	}
 
-	// Swap button indexes.
-	currentButtonIndex[buttonIndex] = currentPageIndex;
-	currentButtonIndex[1] = pageIndex;
-	console.log(currentButtonIndex);
-
-	// Set current page index to new index.
-	currentPageIndex = pageIndex;
-
-	// Set head title
-	document.title = pageTitle[currentPageIndex];
-
-	// Draw view
 	drawView();
+}
+
+// Updates title text.
+function updateTitleText()
+{
+	document.title = pageTitle[currentPageIndex][languageSelection];
 }
