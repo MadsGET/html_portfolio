@@ -10,10 +10,15 @@ function drawView()
 		${getHeader(currentPageIndex, languageSelection)}
 		<div class="content">
 			<div class="contentContainer">
-				<div class="contentHead"><p class="contentTitle" >${aboutTitle[languageSelection]}<p></div>
-				<div class="contentArea">
-					<p class="textArea">${largeInfo}</p>
+				<div class="contentHead">
+					<p class="contentTitle">${aboutTitle[languageSelection]}<p>
 				</div>
+				<div class="contentArea">
+					<div class="contentBox">
+							<div class="textArea">${largeInfo}</div>
+					</div>
+				</div>
+				<div class="contentOverlay"></div>
 			</div>
 		</div>
 
