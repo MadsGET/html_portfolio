@@ -1,92 +1,21 @@
 
-.animMirrorEffect
+.animScrollEffect
 {
-	animation-name: animMirror;
-	animation-duration: 8s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	animation-direction:alternate;
+	animation-name: scroll;
+	animation-duration: 5s;
+	animation-iteration-count:infinite;
 }
 
-@keyframes animMirror
+
+@keyframes scroll
 {
 	0%
 	{
-		opacity: 0.1;
+
 	}
 
 	100%
 	{
-		opacity:0.01;
-	}
-}
 
-.animSmokeEffect
-{
-	animation-name: animSmokeEffect;
-	animation-duration: 64s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-@keyframes animSmokeEffect
-{
-	0%
-	{
-		opacity: 0.0;
-		background-position: 0vw 0vh;
-	}
-
-	50%
-	{
-		opacity:0.075;
-	}
-
-	100%
-	{
-		background-position: 100vw 0vh;
-		opacity: 0.0;
-	}
-}
-
-.fadeOut
-{
-	animation-duration: 2s;
-	animation-name: animMoveOut;
-	animation-timing-function: linear;
-	animation-fill-mode: forwards;
-}
-
-.fadeIn
-{
-	animation-duration: 2s;
-	animation-name: animMoveIn;
-	animation-timing-function: linear;
-	animation-fill-mode:forwards;
-}
-
-@keyFrames animMoveOut
-{
-	0%
-	{
-		opacity:1;
-	}
-
-	100%
-	{
-		opacity:0.0;
-	}
-}
-
-@keyFrames animMoveIn
-{
-	0%
-	{
-		opacity: 0.0;
-	}
-
-	100%
-	{
-		opacity: 1.0;
 	}
 }
