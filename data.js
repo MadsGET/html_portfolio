@@ -88,8 +88,12 @@ function getContent(pageIndex, languageIndex)
 				<div class="contentBody" style="background-image: url('images/contactFrame.svg');">
 						<div class="buttonContainer">
 							<div style="grid-area: buttonsT; align-items:center; display:flex;">
-								<div class="borderButton largeRoundButton"><p style="margin:auto;">${projectText}</p></div>
-								<div class="borderButton largeRoundButton"><p style="margin:auto;">${blogText}</p></div>
+								<div class="borderButton largeRoundButton" style="background-image:url('images/iconProject.png');">
+									<p style="margin:auto;">${projectText}</p>
+								</div>
+								<div class="borderButton largeRoundButton" style="background-image:url('images/iconBlog.png');">
+									<p style="margin:auto;">${blogText}</p>
+								</div>
 							</div>
 							<div style="grid-area: buttonsM; align-items:center; display:flex;">
 								<div class="smallButton borderButton"><p style="margin:auto;">Email</p></div>

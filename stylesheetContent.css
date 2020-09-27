@@ -35,7 +35,7 @@
 
 	/* Background */
 	background-image: url('images/portrait.png');
-	background-size: 90% 100%;
+	background-size: 85% 100%;
 	background-repeat: no-repeat;
 	background-position: bottom;
 }
@@ -140,6 +140,7 @@
 	
 	/* Text */
 	font-size: 200%;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
 
 	/* Border */
 	border: 0.25vw solid snow;
@@ -150,14 +151,35 @@
 	display:flex;
 }
 
+.borderButton:hover
+{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.borderButton:active
+{
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+
 .largeRoundButton
 {
+	/* Background */
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: cover;
+
 	/* Text */
 	font-size: 250%;
 
 	/* Size */
 	height: 90%;
 	width: 45%;
+}
+
+.largeRoundButton:hover
+{
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .mediumButton
