@@ -1,5 +1,5 @@
 // Model
-var currentPageIndex = 0;
+var currentPageIndex = 2;
 var languageSelection = 1; // 0# Nor 1# Eng
 
 // View

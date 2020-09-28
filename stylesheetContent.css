@@ -164,10 +164,12 @@
 
 .largeRoundButton
 {
+	background-color: rgba(255, 255, 255, 0.25);
+
 	/* Background */
 	background-position:center;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: 60% 85%;
 
 	/* Text */
 	font-size: 250%;
@@ -175,11 +177,6 @@
 	/* Size */
 	height: 90%;
 	width: 45%;
-}
-
-.largeRoundButton:hover
-{
-	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .mediumButton
