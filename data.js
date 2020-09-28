@@ -1,5 +1,9 @@
 const pageTitle = [['Om Meg', 'About'], ['Portof&oslash;lje', 'Portfolio'], ['Kontakt', 'Contact']];
 
+const titleText = [['< Hallo Verden >', '< Hello World >'], ['Image (0/0)', 'Image (0/0)'], ['La oss holde kontakten', 'Lets stay connected']];
+const titleSize	= [['180', '200'], ['125', '125'], ['175', '200']];
+const titleMargin = ['-left:10.5vmax;', ':auto', '-right:0;'];
+
 // Static text fields
 const largeInfo =
 [		
@@ -54,60 +58,28 @@ function getFooter(languageIndex)
 
 function getContent(pageIndex, languageIndex)
 {
+	// Content Title
+	let _titleText = titleText[currentPageIndex][languageIndex];
+	let _titleSize = titleSize[currentPageIndex][languageIndex] + '%;';
+	let _titleMargin = 'margin' + titleMargin[currentPageIndex] + ';';
+
+	let textPanelStyle = 'width:40vmax; margin-left: 5vw; border-top: none; border-bottom:none; font-size:65%; overflow: auto; white-space:pre-line; padding:1vmax; color: rgba(255, 255, 255, 0.75)';
+
 	if (pageIndex == 0) {
-
-		// Text
-		let title = (languageIndex) ? '< Hello World >' : '< Hallo Verden >';
-
-		return `
-				<div class="contentHead">
-					<p class="contentTitle" style="padding-right:45%;">${title}<p>
+		return `	
+				<div class="contentHead"><p class="title" style="${_titleMargin} font-size:${_titleSize} "> ${_titleText}</p></div>
+				<div class="contentBody">
+					<div class="glassPanel" style="${textPanelStyle}">${largeInfo[languageIndex]}</div>
+					<div class="portrait" style="left:50%;"></div>
 				</div>
-				<div class="contentBody" style="background-image: url('images/aboutFrame.svg');">
-					<div class="contentBox">
-							<div class="textArea">${largeInfo[languageIndex]}</div>
-					</div>
-				</div>
-				<div class="contentOverlay" style="left:50%;"></div>
-		`
+				<div class="contentFoot"></div>
+			   `;
 	}
 	else if (pageIndex == 1) {
 
 	}
 	else
 	{
-		// Text
-		let title = (languageSelection) ? 'Lets stay connected' : 'La oss holde kontakten';
-		let projectText = (languageSelection) ? 'Projects' : 'Prosjekter';
-		let blogText = (languageSelection) ? 'Blog' : 'Blogg';
 
-		return`
-				<div class="contentHead">
-					<p class="contentTitle" style="margin-right:0; text-align:right;">${title}<p>
-				</div>
-				<div class="contentBody" style="background-image: url('images/contactFrame.svg');">
-						<div class="buttonContainer">
-							<div style="grid-area: buttonsT; align-items:center; display:flex;">
-								<div class="borderButton largeRoundButton" style="background-image:url('images/iconProject.png');">
-									<p style="margin:auto;">${projectText}</p>
-								</div>
-								<div class="borderButton largeRoundButton" style="background-image:url('images/iconBlog.png');">
-									<p style="margin:auto;">${blogText}</p>
-								</div>
-							</div>
-							<div style="grid-area: buttonsM; align-items:center; display:flex;">
-								<div class="smallButton borderButton"><p style="margin:auto;">Email</p></div>
-								<div class="smallButton borderButton"><p style="margin:auto;">Discord</p></div>
-							</div>
-							<div style="grid-area: buttonsB; align-items:center; display:flex;">
-								<div class="mediumButton borderButton"></div>
-								<div class="mediumButton borderButton"></div>
-								<div class="mediumButton borderButton"></div>
-							</div>
-						</div>
-					</div>
-				<div class="contentOverlay" style="left:0%;"></div>
-				</div>
-		`
 	}
 }
