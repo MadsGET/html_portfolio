@@ -48,17 +48,29 @@
 /* Set text scale*/
 
 /*Phone aspect ratio || vertical screen*/
-@media screen and (max-aspect-ratio: 1/1) and (max-width: 768px), screen and (max-height: 512px)
+@media screen and (max-aspect-ratio: 1/1) and (max-width: 768px), screen and (max-height: 512px) and (max-width:512)
 {
-	.portrait
+	body
 	{
-		display:none;
+		font-size: 3vmin;
 	}
 
-	.contactContainer
+	.aboutTitle, .contactTitle
 	{
 		margin:auto;
-		opacity:0.5;
+		margin-bottom:0.5%;
+		text-align:center;
+	}
+
+	.contactContainer, .aboutContainer
+	{
+		width: 75%;
+		margin: auto;
+	}
+
+	.portrait
+	{
+		display: none;
 	}
 
 	/* Debug 

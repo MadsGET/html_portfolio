@@ -79,23 +79,53 @@
 	background-position: bottom;
 }
 
-
 .glassPanel
 {
+	/* Size */
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
 	border: 0.1vmax solid rgba(255, 255, 255, 0.5);
 	background-color: rgba(255, 255, 255, 0.1);
+	
 	/* Background */
 	background-repeat: no-repeat;
 	background-size: cover;
+	
 	/* Flex */
 	align-items: center;
 	display: flex;
 }
 
+															/* About Page */
+
+.aboutTitle
+{
+	margin-left: 0;
+	font-size: 4vw;
+}
+
+.aboutContainer
+{
+	width: 40%;
+	margin-left: 5vw;
+	border-top: none;
+	border-bottom: none;
+	user-select: text;
+	font-size: 55%;
+	overflow: auto;
+	white-space: pre-line;
+	padding: 1vmax;
+	color: rgba(255, 255, 255, 0.75);
+}
+
+
 															/* Contact Page */
+.contactTitle
+{
+	margin-right: 0;
+	font-size: 3.5vw;
+}
 
 .contactContainer
 {

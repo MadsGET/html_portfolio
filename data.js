@@ -70,11 +70,10 @@ function getContent(pageIndex, languageIndex)
 
 	if (pageIndex == 0)
 	{
-		let panelStyle = 'width:40%; margin-left: 5vw; border-top: none; border-bottom:none; user-select:text; font-size:55%; overflow: auto; white-space:pre-line; padding:1vmax; color: rgba(255, 255, 255, 0.75)';
 		return `	
-		<div class="contentHead"><p class="title" style="margin-left:0; font-size:4vw"> ${_titleText}</p></div>
+		<div class="contentHead"><p class="aboutTitle title"> ${_titleText}</p></div>
 		<div class="contentBody">
-			<div class="glassPanel" style="${panelStyle}">${largeInfo[languageIndex]}</div>
+			<div class="glassPanel aboutContainer">${largeInfo[languageIndex]}</div>
 			<div class="portrait" style="left:50%;"></div>
 		</div>
 		<div class="contentFoot"></div>
@@ -106,7 +105,7 @@ function getContent(pageIndex, languageIndex)
 		let blogText = (languageIndex == 0) ? 'Blogg' : 'Blog';
 
 		 return `	
-				<div class="contentHead"><p class="title" style="margin-right:0; font-size:3.5vw;"> ${_titleText}</p></div>
+				<div class="contentHead"><p class="contactTitle title"> ${_titleText}</p></div>
 				<div class="contentBody">
 					<div class="glassPanel contactContainer">
 						<div class="buttonPanel">
