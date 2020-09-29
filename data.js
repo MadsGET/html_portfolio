@@ -6,7 +6,7 @@ const discord = 'MadsF_6295';
 
 // Images
 const buttonImages = ['iconProject.png', 'iconBlog.png'];
-const iconImages = ['icon_Email.svg', 'icon_Discord.svg', 'icon_Youtube.svg', 'icon_Instagram.svg', 'icon_Facebook.svg'];
+const iconImages = ['icon_Email.svg', 'icon_Discord.svg', 'icon_Youtube.svg', 'icon_Instagram.svg', 'icon_Facebook.svg', 'icon_ArrowL.svg', 'icon_ArrowR.svg'];
 
 // Content Title
 const titleText = [['< Hallo Verden >', '< Hello World >'], ['Image (0/0)', 'Image (0/0)'], ['La oss holde kontakten', 'Lets stay connected']];
@@ -33,9 +33,9 @@ function getHeader(pageIndex, languageIndex)
 
 		<div class="header">
 			<div class="buttonArea">
-				${createHeaderButton(pageIndex, languageIndex, 0, "grid-area: buttonL; margin-right:0;")}
+				${createHeaderButton(pageIndex, languageIndex, 0, "grid-area: buttonL;")}
 				${createHeaderButton(pageIndex, languageIndex, 1, "grid-area: buttonM;")}
-				${createHeaderButton(pageIndex, languageIndex, 2, "grid-area: buttonR; margin-left:0;")}
+				${createHeaderButton(pageIndex, languageIndex, 2, "grid-area: buttonR;")}
 			</div>
 		</div>
 	`;
@@ -44,7 +44,7 @@ function getHeader(pageIndex, languageIndex)
 // Simplified creation of  header button.
 function createHeaderButton(pageIndex, languageIndex, buttonIndex, styleContent)
 {
-	return `<div class="${styleContent}" onclick="onPageSelection(${buttonIndex})"><div class="headerButtonText ${(pageIndex != buttonIndex) ? 'deactivatedButton' : ''}">${pageTitle[buttonIndex][languageIndex]}</div></div>`
+	return `<div class="headerButton" style="${styleContent}" onclick="onPageSelection(${buttonIndex})"><div class="headerButtonText ${(pageIndex != buttonIndex) ? 'deactivatedButton' : ''}">${pageTitle[buttonIndex][languageIndex]}</div></div>`
 }
 
 function getFooter(languageIndex)
@@ -70,19 +70,29 @@ function getContent(pageIndex, languageIndex)
 
 	if (pageIndex == 0)
 	{
-		let panelStyle = 'width:40%; margin-left: 5vw; border-top: none; border-bottom:none; user-select:text; font-size:65%; overflow: auto; white-space:pre-line; padding:1vmax; color: rgba(255, 255, 255, 0.75)';
+		let panelStyle = 'width:40%; margin-left: 5vw; border-top: none; border-bottom:none; user-select:text; font-size:55%; overflow: auto; white-space:pre-line; padding:1vmax; color: rgba(255, 255, 255, 0.75)';
 		return `	
-				<div class="contentHead"><p class="title" style="margin-left:0; font-size:4vw"> ${_titleText}</p></div>
-				<div class="contentBody">
-					<div class="glassPanel" style="${panelStyle}">${largeInfo[languageIndex]}</div>
-					<div class="portrait" style="left:50%;"></div>
-				</div>
-				<div class="contentFoot"></div>
-				`;
+		<div class="contentHead"><p class="title" style="margin-left:0; font-size:4vw"> ${_titleText}</p></div>
+		<div class="contentBody">
+			<div class="glassPanel" style="${panelStyle}">${largeInfo[languageIndex]}</div>
+			<div class="portrait" style="left:50%;"></div>
+		</div>
+		<div class="contentFoot"></div>
+		`;
 	}
 	else if (pageIndex == 1)
 	{
-
+		return `	
+		<div class="contentHead"><p class="title" style="font-size:4vw"> ${_titleText}</p></div>
+			<div class="contentBody">
+				<div class="imageContainer">
+				<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}');"></div>
+				<div class="imageViewer"></div>
+				<div class="arrow" style="grid-area: arrowR; background-image: url('images/${iconImages[6]}');"></div>
+				</div>
+			</div>
+		<div class="contentFoot"></div>
+		`;
 	}
 	else
 	{

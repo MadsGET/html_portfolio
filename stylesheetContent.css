@@ -53,8 +53,8 @@
 	margin: auto;
 	margin-bottom: 0.5%;
 	
-	/* Background */
-	background-color: rgba(255,128,128,0.5);
+	/* Background 
+	background-color: rgba(255,128,128,0.5);*/
 
 	/* Text */
 	text-shadow: 0 0.25vmax rgba(0, 0, 0, 0.5);
@@ -167,4 +167,37 @@
 	/* Flex */
 	align-content:center;
 	display:flex;
+}
+
+.imageContainer
+{
+	/* Size */
+	height:90%;
+	width:65%;
+	margin:auto;
+
+	/* Grid */
+	grid-template-areas: 'arrowL imageViewer arrowR';
+	grid-auto-columns: 0.5fr 2fr 0.5fr;
+	display:grid;
+
+}
+
+.arrow
+{
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 75% 35%;
+	opacity:0.35;
+}
+
+.arrow:hover
+{
+	opacity:0.6;
+}
+
+.imageViewer, .arrow
+{
+	box-sizing:border-box;
+	border:1px solid black;
 }
