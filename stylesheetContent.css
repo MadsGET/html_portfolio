@@ -48,10 +48,17 @@
 
 .title
 {
-	text-shadow: 0 0.25vmax rgba(0, 0, 0, 0.5);
-	font-size:50%;
+	/* Size */
+	width: 50%;
 	margin: auto;
 	margin-bottom: 0.5%;
+	
+	/* Background */
+	background-color: rgba(255,128,128,0.5);
+
+	/* Text */
+	text-shadow: 0 0.25vmax rgba(0, 0, 0, 0.5);
+	text-align: center;
 }
 
 .portrait
@@ -102,16 +109,17 @@
 
 .largeButton
 {
-	font-size: 145%;
+	font-size: 0;
 	text-shadow: 0.25vmax 0.25vmax rgba(0, 0, 0, 0.5);
 
 	/* Background */
-	background-size: 75% 90%;
+	background-size: 100% 100%;
 	background-position: center;
 }
 
 .largeButton:hover
 {
+	font-size: 145%;
 	opacity:0.75;
 }
 
@@ -128,6 +136,12 @@
 	background-position: left center;
 	background-origin:content-box;
 	background-size:12.5% 65%;
+}
+
+.textfield:hover
+{
+	user-select:text;
+	font-size:40%;
 }
 
 .socialMediaIcon

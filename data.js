@@ -10,8 +10,6 @@ const iconImages = ['icon_Email.svg', 'icon_Discord.svg', 'icon_Youtube.svg', 'i
 
 // Content Title
 const titleText = [['< Hallo Verden >', '< Hello World >'], ['Image (0/0)', 'Image (0/0)'], ['La oss holde kontakten', 'Lets stay connected']];
-const titleSize	= [['180', '200'], ['125', '125'], ['175', '190']];
-const titleMargin = ['-left:10.5vmax;', ':auto', '-right:6vmax;'];
 
 // Static text fields
 const largeInfo =
@@ -69,14 +67,12 @@ function getContent(pageIndex, languageIndex)
 {
 	// Content Title
 	let _titleText = titleText[currentPageIndex][languageIndex];
-	let _titleSize = titleSize[currentPageIndex][languageIndex] + '%;';
-	let _titleMargin = 'margin' + titleMargin[currentPageIndex] + ';';
 
 	if (pageIndex == 0)
 	{
-		let panelStyle = 'width:40vmax; margin-left: 5vw; border-top: none; border-bottom:none; font-size:65%; overflow: auto; white-space:pre-line; padding:1vmax; color: rgba(255, 255, 255, 0.75)';
+		let panelStyle = 'width:40%; margin-left: 5vw; border-top: none; border-bottom:none; user-select:text; font-size:65%; overflow: auto; white-space:pre-line; padding:1vmax; color: rgba(255, 255, 255, 0.75)';
 		return `	
-				<div class="contentHead"><p class="title" style="${_titleMargin} font-size:${_titleSize} "> ${_titleText}</p></div>
+				<div class="contentHead"><p class="title" style="margin-left:0; font-size:4vw"> ${_titleText}</p></div>
 				<div class="contentBody">
 					<div class="glassPanel" style="${panelStyle}">${largeInfo[languageIndex]}</div>
 					<div class="portrait" style="left:50%;"></div>
@@ -92,7 +88,7 @@ function getContent(pageIndex, languageIndex)
 	{
 
 		// Panel style
-		let panelStyle = 'width:35vmax; margin-left: 55%; border-top: none; border-bottom:none; align-items:center; display:flex;';
+		let panelStyle = 'width:40%; margin-left: 55%; border-top: none; border-bottom:none; align-items:center; display:flex;';
 		let panelColor = 'background-color: rgba(0, 0, 0, 0);';
 
 		// Paragraph style and language
@@ -101,7 +97,7 @@ function getContent(pageIndex, languageIndex)
 		let blogText = (languageIndex == 0) ? 'Blogg' : 'Blog';
 
 		 return `	
-				<div class="contentHead"><p class="title" style="${_titleMargin} font-size:${_titleSize} "> ${_titleText}</p></div>
+				<div class="contentHead"><p class="title" style="margin-right:0; font-size:3.5vw;"> ${_titleText}</p></div>
 				<div class="contentBody">
 					<div class="glassPanel" style="${panelStyle}">
 						<div class="buttonPanel">
