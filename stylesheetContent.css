@@ -101,6 +101,7 @@
 
 	/* Background */
 	background-repeat:no-repeat;
+	background-size:cover;
 
 	/* Flex */
 	align-items:center;
@@ -178,14 +179,13 @@
 
 	/* Grid */
 	grid-template-areas: 'arrowL imageViewer arrowR';
-	grid-auto-columns: 0.5fr 2fr 0.5fr;
+	grid-auto-columns: 0.3fr 2fr 0.3fr;
 	display:grid;
 
 }
 
 .arrow
 {
-	background-position:center;
 	background-repeat:no-repeat;
 	background-size: 75% 35%;
 	opacity:0.35;
@@ -196,8 +196,14 @@
 	opacity:0.6;
 }
 
+.arrow:active
+{
+	opacity:0.8;
+}
+
+/*
 .imageViewer, .arrow
 {
 	box-sizing:border-box;
 	border:1px solid black;
-}
+}*/
