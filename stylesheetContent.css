@@ -61,6 +61,8 @@
 	text-align: center;
 }
 
+															/* Generic Elements*/
+
 .portrait
 {
 	/* Transform */
@@ -77,6 +79,42 @@
 	background-position: bottom;
 }
 
+
+.glassPanel
+{
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	border: 0.1vmax solid rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.1);
+	/* Background */
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* Flex */
+	align-items: center;
+	display: flex;
+}
+
+															/* Contact Page */
+
+.contactContainer
+{
+	/* Size */
+	width: 40%;
+	margin-left: 55%;
+	
+	/* Borders */
+	border-top: none;
+	border-bottom: none;
+
+	/* Flex */
+	align-items: center;
+	display: flex;
+
+	/* Background */
+	background-color: rgba(0, 0, 0, 0);
+}
+
 .buttonPanel
 {
 	height:85%;
@@ -91,25 +129,9 @@
 	display:grid;
 }
 
-.glassPanel
-{
-	height:100%;
-	width:100%;
-	box-sizing: border-box;
-	border: 0.1vmax solid rgba(255, 255, 255, 0.5);
-	background-color: rgba(255, 255, 255, 0.1);
-
-	/* Background */
-	background-repeat:no-repeat;
-	background-size:cover;
-
-	/* Flex */
-	align-items:center;
-	display:flex;
-}
-
 .largeButton
 {
+	/* Text */
 	font-size: 0;
 	text-shadow: 0.25vmax 0.25vmax rgba(0, 0, 0, 0.5);
 
@@ -170,6 +192,8 @@
 	display:flex;
 }
 
+															/* Portfolio Page*/
+
 .imageContainer
 {
 	/* Size */
@@ -200,7 +224,6 @@
 {
 	opacity:0.8;
 }
-
 /*
 .imageViewer, .arrow
 {

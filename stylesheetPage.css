@@ -46,3 +46,25 @@
 
 /* Media Vertical Mode*/
 /* Set text scale*/
+
+/*Phone aspect ratio || vertical screen*/
+@media screen and (max-aspect-ratio: 1/1) and (max-width: 768px), screen and (max-height: 512px)
+{
+	.portrait
+	{
+		display:none;
+	}
+
+	.contactContainer
+	{
+		margin:auto;
+		opacity:0.5;
+	}
+
+	/* Debug 
+	div
+	{
+		background-color: rgba(255, 0, 0, 0.25);
+	}
+	*/
+}

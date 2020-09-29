@@ -98,7 +98,6 @@ function getContent(pageIndex, languageIndex)
 	{
 
 		// Panel style
-		let panelStyle = 'width:40%; margin-left: 55%; border-top: none; border-bottom:none; align-items:center; display:flex;';
 		let panelColor = 'background-color: rgba(0, 0, 0, 0);';
 
 		// Paragraph style and language
@@ -109,7 +108,7 @@ function getContent(pageIndex, languageIndex)
 		 return `	
 				<div class="contentHead"><p class="title" style="margin-right:0; font-size:3.5vw;"> ${_titleText}</p></div>
 				<div class="contentBody">
-					<div class="glassPanel" style="${panelStyle}">
+					<div class="glassPanel contactContainer">
 						<div class="buttonPanel">
 							<div class="glassPanel socialMediaPanel" style="${panelColor} grid-area:socialMedia">
 								<div class="socialMediaIcon" style="background-image: url('images/${iconImages[2]}');"></div>
