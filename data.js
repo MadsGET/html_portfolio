@@ -74,7 +74,7 @@ function getContent(pageIndex, languageIndex)
 		<div class="contentHead"><p class="aboutTitle title"> ${_titleText}</p></div>
 		<div class="contentBody">
 			<div class="glassPanel aboutContainer">${largeInfo[languageIndex]}</div>
-			<div class="portrait" style="left:50%;"></div>
+			<div class="portrait" style="left:42.5%;"></div>
 		</div>
 		<div class="contentFoot"></div>
 		`;
@@ -86,7 +86,7 @@ function getContent(pageIndex, languageIndex)
 			<div class="contentBody">
 				<div class="imageContainer">
 				<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;"></div>
-				<div class="imageViewer glassPanel" style="background-image:url('images/debugImage.jpg')"></div>
+				<div class="glassPanel" style="grid-area: imageViewer; background-image:url('images/debugImage.jpg')"></div>
 				<div class="arrow" style="grid-area: arrowR; background-image: url('images/${iconImages[6]}'); background-position:center right;"></div>
 				</div>
 			</div>
@@ -127,7 +127,7 @@ function getContent(pageIndex, languageIndex)
 							</div>
 						</div>
 					</div>
-					<div class="portrait"></div>
+					<div class="portrait" style="right:42.5%;"></div>
 				</div>
 				<div class="contentFoot"></div>
 				`;

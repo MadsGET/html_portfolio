@@ -11,10 +11,8 @@
 	background-size: cover;
 
 	/* Size */
-	min-width:256px;
-	min-height:256px;
 	height: 100vh;
-	width: 100vw;
+	/*width: 100vw; THIS CAUSED SCALING ISSUES FOR SOME REASON*/
 	margin: 0;
 
 	/* Flex */
@@ -44,22 +42,40 @@
 }*/
 
 
-/* Media Vertical Mode*/
-/* Set text scale*/
-
 /*Phone aspect ratio || vertical screen*/
 @media screen and (max-aspect-ratio: 1/1) and (max-width: 768px), screen and (max-height: 512px) and (max-width:512)
 {
 	body
 	{
-		font-size: 3vmin;
+		font-size: 4vmin;
 	}
 
+	.portrait
+	{
+		display: none;
+	}
+												/* Header */
+
+	.buttonArea
+	{
+		font-size:3vmin;
+		width:42.5%;
+	}
+
+												/* Footer */
+	.footerContent
+	{
+		width:55%;
+	}
+
+												/* Content */
 	.aboutTitle, .contactTitle
 	{
+		width:100%;
 		margin:auto;
 		margin-bottom:0.5%;
 		text-align:center;
+		font-size:6vw;
 	}
 
 	.contactContainer, .aboutContainer
@@ -68,10 +84,27 @@
 		margin: auto;
 	}
 
-	.portrait
+	.aboutContainer
 	{
-		display: none;
+		font-size: 2.80vmin;
 	}
+
+	.imageContainer
+	{
+		width:100%;
+		height:50%;
+
+		/* Grid */
+		grid-template-columns: 0.1fr 1fr 0.1fr;
+		grid-template-rows: 1fr;
+		display: grid;
+	}
+
+	.arrow
+	{
+		background-size:40% 25%;
+	}
+
 
 	/* Debug 
 	div
@@ -80,3 +113,13 @@
 	}
 	*/
 }
+
+/* Small desktop mode */
+@media not (max-aspect-ratio: 1/1) and (min-width:768px)
+{
+	div
+	{
+		background-color: red;
+	}
+}
+/* Large Vertical Mode */

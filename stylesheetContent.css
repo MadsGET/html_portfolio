@@ -34,6 +34,7 @@
 .contentBody
 {
 	position:relative;
+
 	/* Borders */
 	border:none;
 }
@@ -68,7 +69,7 @@
 	/* Transform */
 	position: absolute;
 	height: 125%;
-	width: 50%;
+	width: 60%;
 	bottom:0%;
 	margin:auto;
 
@@ -233,7 +234,7 @@
 
 	/* Grid */
 	grid-template-areas: 'arrowL imageViewer arrowR';
-	grid-auto-columns: 0.3fr 2fr 0.3fr;
+	grid-template-columns: 0.3fr 2fr 0.3fr;
 	display:grid;
 
 }
