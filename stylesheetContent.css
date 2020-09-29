@@ -7,7 +7,7 @@
 
 	/* Grid */
 	grid-template-areas: 'contentHead' 'contentBody' 'contentFoot';
-	grid-template-rows: 1fr 3fr 0.75fr;
+	grid-template-rows: 1fr 3fr 0.65fr;
 	grid-template-columns: 1fr;
 	display:grid;
 }
@@ -70,6 +70,20 @@
 	background-position: bottom;
 }
 
+.buttonPanel
+{
+	height:85%;
+	width:85%;
+	margin:auto;
+
+	/* Grid */
+	grid-template-areas: 'socialMedia socialMedia' 'largeButtonL largeButtonR' 'textfieldL textfieldR';
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.75fr 3fr 0.75fr;
+	grid-gap: 1vmax;
+	display:grid;
+}
+
 .glassPanel
 {
 	height:100%;
@@ -77,4 +91,66 @@
 	box-sizing: border-box;
 	border: 0.1vmax solid rgba(255, 255, 255, 0.5);
 	background-color: rgba(255, 255, 255, 0.1);
+
+	/* Background */
+	background-repeat:no-repeat;
+
+	/* Flex */
+	align-items:center;
+	display:flex;
+}
+
+.largeButton
+{
+	font-size: 145%;
+	text-shadow: 0.25vmax 0.25vmax rgba(0, 0, 0, 0.5);
+
+	/* Background */
+	background-size: 75% 90%;
+	background-position: center;
+}
+
+.largeButton:hover
+{
+	opacity:0.75;
+}
+
+.textfield
+{
+	/* Text */
+	font-size:75%;
+
+	/* Transform */
+	margin:auto;
+	padding:5%;
+
+	/* Background */
+	background-position: left center;
+	background-origin:content-box;
+	background-size:12.5% 65%;
+}
+
+.socialMediaIcon
+{
+	/* Size */
+	height:75%;
+	width:15%;
+	margin:auto;
+
+	/* Background */
+	background-size:80% 90%;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.socialMediaIcon:hover
+{
+	opacity:0.5;
+}
+
+.socialMediaPanel
+{
+	/* Flex */
+	align-content:center;
+	display:flex;
 }

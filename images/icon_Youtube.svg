@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_Youtube_1" data-name="icon_Youtube 1" class="cls-1" d="M52.87,64H11.13C4.983,64,0,57.451,0,49.371V14.629C0,6.549,4.983,0,11.13,0H52.87C59.017,0,64,6.549,64,14.629V49.371C64,57.451,59.017,64,52.87,64ZM25.045,16.461v29.25L44.52,31.086Z"/>
+</svg>

@@ -1,8 +1,17 @@
 const pageTitle = [['Om Meg', 'About'], ['Portof&oslash;lje', 'Portfolio'], ['Kontakt', 'Contact']];
 
+// Media Links
+const email = 'Mads@GetAcademy.no';
+const discord = 'MadsF_6295';
+
+// Images
+const buttonImages = ['iconProject.png', 'iconBlog.png'];
+const iconImages = ['icon_Email.svg', 'icon_Discord.svg', 'icon_Youtube.svg', 'icon_Instagram.svg', 'icon_Facebook.svg'];
+
+// Content Title
 const titleText = [['< Hallo Verden >', '< Hello World >'], ['Image (0/0)', 'Image (0/0)'], ['La oss holde kontakten', 'Lets stay connected']];
-const titleSize	= [['180', '200'], ['125', '125'], ['175', '200']];
-const titleMargin = ['-left:10.5vmax;', ':auto', '-right:0;'];
+const titleSize	= [['180', '200'], ['125', '125'], ['175', '190']];
+const titleMargin = ['-left:10.5vmax;', ':auto', '-right:6vmax;'];
 
 // Static text fields
 const largeInfo =
@@ -63,23 +72,71 @@ function getContent(pageIndex, languageIndex)
 	let _titleSize = titleSize[currentPageIndex][languageIndex] + '%;';
 	let _titleMargin = 'margin' + titleMargin[currentPageIndex] + ';';
 
-	let textPanelStyle = 'width:40vmax; margin-left: 5vw; border-top: none; border-bottom:none; font-size:65%; overflow: auto; white-space:pre-line; padding:1vmax; color: rgba(255, 255, 255, 0.75)';
-
-	if (pageIndex == 0) {
+	if (pageIndex == 0)
+	{
+		let panelStyle = 'width:40vmax; margin-left: 5vw; border-top: none; border-bottom:none; font-size:65%; overflow: auto; white-space:pre-line; padding:1vmax; color: rgba(255, 255, 255, 0.75)';
 		return `	
 				<div class="contentHead"><p class="title" style="${_titleMargin} font-size:${_titleSize} "> ${_titleText}</p></div>
 				<div class="contentBody">
-					<div class="glassPanel" style="${textPanelStyle}">${largeInfo[languageIndex]}</div>
+					<div class="glassPanel" style="${panelStyle}">${largeInfo[languageIndex]}</div>
 					<div class="portrait" style="left:50%;"></div>
 				</div>
 				<div class="contentFoot"></div>
-			   `;
+				`;
 	}
-	else if (pageIndex == 1) {
+	else if (pageIndex == 1)
+	{
 
 	}
 	else
 	{
 
+		// Panel style
+		let panelStyle = 'width:35vmax; margin-left: 55%; border-top: none; border-bottom:none; align-items:center; display:flex;';
+		let panelColor = 'background-color: rgba(0, 0, 0, 0);';
+
+		// Paragraph style and language
+		let paragraphStyle = 'margin:auto;';
+		let projectText = (languageIndex == 0) ? 'Prosjekter' : 'Projects';
+		let blogText = (languageIndex == 0) ? 'Blogg' : 'Blog';
+
+		 return `	
+				<div class="contentHead"><p class="title" style="${_titleMargin} font-size:${_titleSize} "> ${_titleText}</p></div>
+				<div class="contentBody">
+					<div class="glassPanel" style="${panelStyle}">
+						<div class="buttonPanel">
+							<div class="glassPanel socialMediaPanel" style="${panelColor} grid-area:socialMedia">
+								<div class="socialMediaIcon" style="background-image: url('images/${iconImages[2]}');"></div>
+								<div class="socialMediaIcon" style="background-image: url('images/${iconImages[3]}');"></div>
+								<div class="socialMediaIcon" style="background-image: url('images/${iconImages[4]}');"></div>
+							</div>
+							<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonL; background-image: url('images/${buttonImages[0]}');">
+								<p style="${paragraphStyle}">${projectText}</p>
+							</div>
+							<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonR; background-image: url('images/${buttonImages[1]}');">
+								<p style="${paragraphStyle}">${blogText}</p>
+							</div>
+							<div class="glassPanel textfield" style="${panelColor} grid-area:textfieldL; background-image: url('images/${iconImages[0]}')" ${OnTextFieldEnter(email)} ${OnTextFieldExit('Email')}>
+								<p style="margin:auto;">Email</p></div>
+							<div class="glassPanel textfield" style="${panelColor} grid-area:textfieldR; background-image: url('images/${iconImages[1]}')" ${OnTextFieldEnter(discord)} ${OnTextFieldExit('Discord')}>
+								<p style="margin:auto;">Discord</p>
+							</div>
+						</div>
+					</div>
+					<div class="portrait"></div>
+				</div>
+				<div class="contentFoot"></div>
+				`;
 	}
+}
+
+
+function OnTextFieldEnter(text)
+{
+	return `onMouseEnter = "this.children[0].innerText = '${text}'; console.log(true);"`;
+}
+
+function OnTextFieldExit(text)
+{
+	return `onMouseLeave = "this.children[0].innerText = '${text}'; console.log(false);"`;
 }
