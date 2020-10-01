@@ -255,6 +255,11 @@ p
 	background-size:100% 100%;
 }
 
+.imageViewer:hover .mediaDataDisplay
+{
+	display:grid;
+}
+
 .arrow
 {
 	background-repeat:no-repeat;

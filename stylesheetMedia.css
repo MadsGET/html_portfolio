@@ -9,7 +9,7 @@
 	/* Grid */
 	grid-template-areas: 'mediaHead' 'mediaBody' 'mediaFooter';
 	grid-template-rows: 0.6fr 4fr 2fr;
-	display:grid;
+	display:none;
 }
 
 .mediaHead, .mediaFooter
