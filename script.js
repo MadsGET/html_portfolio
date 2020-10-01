@@ -1,6 +1,10 @@
 // Model
-var currentPageIndex = 0;
+var currentPageIndex = 1;
 var languageSelection = 1; // 0# Nor 1# Eng
+
+// Media Object
+let mediaIndex = 0;
+let mediaObject = fetchMediaData(mediaIndex);
 
 // View
 function drawView()
@@ -8,9 +12,7 @@ function drawView()
 	// Draw the view.
 	document.getElementById('page').innerHTML = `
 		${getHeader(currentPageIndex, languageSelection)}
-		<div class="content">
-			${getContent(currentPageIndex, languageSelection)}
-		</div>
+		${getContent(currentPageIndex, languageSelection)}
 		${getFooter(languageSelection)}
 	`;
 
@@ -34,4 +36,16 @@ function onPageSelection(pageIndex)
 function updateTitleText()
 {
 	document.title = pageTitle[currentPageIndex][languageSelection];
+}
+
+// On Media Change
+function onMediaChange(delta)
+{
+	if (withinRange(0, albums[selectedAlbumIndex].mediaArray.length, mediaIndex + delta))
+	{
+		mediaObject = fetchMediaData(mediaIndex + delta);
+		mediaIndex = mediaIndex + delta;
+		console.log(mediaIndex);
+		drawView();
+	}
 }

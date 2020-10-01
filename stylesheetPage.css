@@ -8,11 +8,12 @@
 
 	/* Background */
 	background-image: url('images/backgroundImage.png');
-	background-size: cover;
+	background-size:cover;
+
 
 	/* Size */
 	height: 100vh;
-	/*width: 100vw; THIS CAUSED SCALING ISSUES FOR SOME REASON*/
+	/*width: 100vw; THIS CAUSED SCALING ISSUES FOR SOME REASON ?*/
 	margin: 0;
 
 	/* Flex */
@@ -43,7 +44,7 @@
 
 
 /*Phone aspect ratio || vertical screen*/
-@media screen and (max-aspect-ratio: 1/1) and (max-width: 768px), screen and (max-height: 512px) and (max-width:512)
+@media screen and (max-aspect-ratio: 1/1) and (max-width: 768px), screen and (max-height: 512px) and (max-aspect-ratio: 1/1)
 {
 	body
 	{
@@ -54,34 +55,46 @@
 	{
 		display: none;
 	}
-												/* Header */
+
+	/* Header */
+	.header
+	{
+		background-size: 97.5% 2%;
+	}
 
 	.buttonArea
 	{
-		font-size:3vmin;
-		width:42.5%;
+		font-size: 5vmin;
+		width: 42.5%;
 	}
 
-												/* Footer */
+	.buttonArea
+	{
+		width:65%;
+	}
+
+	/* Footer */
 	.footerContent
 	{
-		width:55%;
+		width: 55%;
 	}
 
-												/* Content */
+	/* Content */
 	.aboutTitle, .contactTitle
 	{
-		width:100%;
-		margin:auto;
-		margin-bottom:0.5%;
-		text-align:center;
-		font-size:6vw;
+		width: 100%;
+		margin: auto;
+		margin-bottom: 0.5%;
+		text-align: center;
+		font-size: 6vw;
 	}
 
 	.contactContainer, .aboutContainer
 	{
-		width: 75%;
+		height: 80%;
+		width: 95%;
 		margin: auto;
+		border: 0.1vmax solid rgba(255, 255, 255, 0.5);
 	}
 
 	.aboutContainer
@@ -89,11 +102,16 @@
 		font-size: 2.80vmin;
 	}
 
+	.largeButton
+	{
+		font-size:150%;
+		color:snow;
+	}
+
 	.imageContainer
 	{
-		width:100%;
-		height:50%;
-
+		width: 100%;
+		height: 50%;
 		/* Grid */
 		grid-template-columns: 0.1fr 1fr 0.1fr;
 		grid-template-rows: 1fr;
@@ -102,7 +120,7 @@
 
 	.arrow
 	{
-		background-size:40% 25%;
+		background-size: 40% 25%;
 	}
 
 
@@ -115,11 +133,11 @@
 }
 
 /* Small desktop mode */
-@media not (max-aspect-ratio: 1/1) and (min-width:768px)
+@media screen and (max-height: 512px), screen and (max-width:512px)
 {
-	div
+	.aboutContainer
 	{
-		background-color: red;
+		/*font-size: calc(8px + 0.1vmin);*/
 	}
 }
 /* Large Vertical Mode */

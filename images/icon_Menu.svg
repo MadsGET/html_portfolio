@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_Menu_1" data-name="icon_Menu 1" class="cls-1" d="M0,64V51.2H64V64H0ZM0,25.6H64V38.4H0V25.6ZM0,0H64V12.8H0V0Z"/>
+</svg>

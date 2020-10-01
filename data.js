@@ -1,3 +1,4 @@
+// Page Title
 const pageTitle = [['Om Meg', 'About'], ['Portof&oslash;lje', 'Portfolio'], ['Kontakt', 'Contact']];
 
 // Media Links
@@ -55,9 +56,9 @@ function getFooter(languageIndex)
 	return `
 		<div class="footer">
 			<div class="footerContent">
-				<div class="footerContainer" style="grid-area: footerContainerL;"><p class="footerText" style="margin-left:0;"> ${language}<p></div>
+				<div class="footerContainer" style="grid-area: footerContainerL;"><p class="footerText" style="margin-left:auto;"> ${language}<p></div>
 				<div class="footerContainer toggleButton toggleButton${(languageIndex == 0) ? 'On' : 'Off'}" style="grid-area: footerContainerM;" onclick="languageSelection = (languageSelection == 0) ? 1 : 0; drawView();"></div>
-				<div class="footerContainer" style="grid-area: footerContainerR;"><p class="footerText" style="margin-right:0;">${copyright}<p></div>
+				<div class="footerContainer" style="grid-area: footerContainerR;"><p class="footerText" style="margin-right:auto;">${copyright}<p></div>
 			</div>
 		</div>
 	`
@@ -71,26 +72,30 @@ function getContent(pageIndex, languageIndex)
 	if (pageIndex == 0)
 	{
 		return `	
-		<div class="contentHead"><p class="aboutTitle title"> ${_titleText}</p></div>
-		<div class="contentBody">
-			<div class="glassPanel aboutContainer">${largeInfo[languageIndex]}</div>
-			<div class="portrait" style="left:42.5%;"></div>
+		<div class="content">
+			<div class="contentHead"><p class="aboutTitle title"> ${_titleText}</p></div>
+			<div class="contentBody">
+				<div class="glassPanel aboutContainer">${largeInfo[languageIndex]}</div>
+				<div class="portrait" style="left:42.5%;"></div>
+			</div>
+			<div class="contentFoot"></div>
 		</div>
-		<div class="contentFoot"></div>
 		`;
 	}
 	else if (pageIndex == 1)
 	{
 		return `	
-		<div class="contentHead"><p class="title" style="font-size:3.5vw"> ${_titleText}</p></div>
-			<div class="contentBody">
-				<div class="imageContainer">
-				<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;"></div>
-				<div class="glassPanel" style="grid-area: imageViewer; background-image:url('images/debugImage.jpg')"></div>
-				<div class="arrow" style="grid-area: arrowR; background-image: url('images/${iconImages[6]}'); background-position:center right;"></div>
+		<div class="content" style="">
+			<div class="contentHead"><p class="title" style="font-size:3.5vw"> ${mediaObject.title[languageIndex]} (${(mediaIndex + 1)}/${fetchAlbumLength()})</p></div>
+				<div class="contentBody">
+					<div class="imageContainer">
+					<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;" onclick="onMediaChange(-1);"></div>
+					<div class="imageViewer glassPanel" style="background-image:url('${mediaObject.path}')">${getOverlayHTML(mediaObject, languageIndex)}</div>
+					<div class="arrow" style="grid-area: arrowR; background-image: url('images/${iconImages[6]}'); background-position:center right;" onclick="onMediaChange(+1);"></div>
+					</div>
 				</div>
-			</div>
-		<div class="contentFoot"></div>
+			<div class="contentFoot"></div>
+		</div>
 		`;
 	}
 	else
@@ -100,36 +105,38 @@ function getContent(pageIndex, languageIndex)
 		let panelColor = 'background-color: rgba(0, 0, 0, 0);';
 
 		// Paragraph style and language
-		let paragraphStyle = 'margin:auto;';
 		let projectText = (languageIndex == 0) ? 'Prosjekter' : 'Projects';
 		let blogText = (languageIndex == 0) ? 'Blogg' : 'Blog';
 
-		 return `	
-				<div class="contentHead"><p class="contactTitle title"> ${_titleText}</p></div>
-				<div class="contentBody">
-					<div class="glassPanel contactContainer">
-						<div class="buttonPanel">
-							<div class="glassPanel socialMediaPanel" style="${panelColor} grid-area:socialMedia">
-								<div class="socialMediaIcon" style="background-image: url('images/${iconImages[2]}');"></div>
-								<div class="socialMediaIcon" style="background-image: url('images/${iconImages[3]}');"></div>
-								<div class="socialMediaIcon" style="background-image: url('images/${iconImages[4]}');"></div>
-							</div>
-							<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonL; background-image: url('images/${buttonImages[0]}');">
-								<p style="${paragraphStyle}">${projectText}</p>
-							</div>
-							<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonR; background-image: url('images/${buttonImages[1]}');">
-								<p style="${paragraphStyle}">${blogText}</p>
-							</div>
-							<div class="glassPanel textfield" style="${panelColor} grid-area:textfieldL; background-image: url('images/${iconImages[0]}')" ${OnTextFieldEnter(email)} ${OnTextFieldExit('Email')}>
-								<p style="margin:auto;">Email</p></div>
-							<div class="glassPanel textfield" style="${panelColor} grid-area:textfieldR; background-image: url('images/${iconImages[1]}')" ${OnTextFieldEnter(discord)} ${OnTextFieldExit('Discord')}>
-								<p style="margin:auto;">Discord</p>
+		return `	
+				<div class="content">
+					<div class="contentHead"><p class="contactTitle title"> ${_titleText}</p></div>
+					<div class="contentBody">
+						<div class="glassPanel contactContainer">
+							<div class="buttonPanel">
+								<div class="glassPanel socialMediaPanel" style="${panelColor} grid-area:socialMedia">
+									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[2]}');"></div>
+									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[3]}');"></div>
+									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[4]}');"></div>
+								</div>
+								<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonL; background-image: url('images/${buttonImages[0]}');">
+									<p class="hiddenText">${projectText}</p>
+								</div>
+								<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonR; background-image: url('images/${buttonImages[1]}');">
+									<p class="hiddenText">${blogText}</p>
+								</div>
+								<div class="glassPanel textfield" style="${panelColor} grid-area:textfieldL; background-image: url('images/${iconImages[0]}')" ${OnTextFieldEnter(email)} ${OnTextFieldExit('Email')}>
+									<p>Email</p>
+								</div>
+								<div class="glassPanel textfield" style="${panelColor} grid-area:textfieldR; background-image: url('images/${iconImages[1]}')" ${OnTextFieldEnter(discord)} ${OnTextFieldExit('Discord')}>
+									<p>Discord</p>
+								</div>
 							</div>
 						</div>
+						<div class="portrait" style="right:42.5%;"></div>
 					</div>
-					<div class="portrait" style="right:42.5%;"></div>
+					<div class="contentFoot"></div>
 				</div>
-				<div class="contentFoot"></div>
 				`;
 	}
 }
