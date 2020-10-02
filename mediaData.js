@@ -77,7 +77,7 @@ let albums =
 				['F&oslash;rste scifi utkast', 'First scifi draft'],
 				[
 					'Dette ble det f&oslash;rste utkastet av scifi siden, som jeg kan se klart n&aring; s&aring; var designet over hele stedet. Men p&aring; den tiden var jeg meget forn&oslash;yd med dette.',
-					'This the first draft of a scifi themed website, as I can clearly see now the design was all over the place. But at the time I was very excited for this design.',
+					'This is the first draft of a scifi themed website, as I can clearly see now the design was all over the place. But at the time I was very excited for this design.',
 				]
 			),
 
