@@ -151,7 +151,7 @@ let albums =
 			new Media
 			(
 				'12.09.2020',
-				['First Portof &oslash;lje Utkast', 'First Portfolio Draft'],
+				['F&oslash;rste Portof&oslash;lje Utkast', 'First Portfolio Draft'],
 				[
 					'Som jeg skulle f&aring; l&aelig;re var jeg altfor langt over mitt eget hode med dette designet, det var bare for vanskelig for meg &aring; foresette flyten mellom hver side.',
 					'As I was about to learn I was way over my head with this design, it was to hard for me to find a design flow between each page.',
