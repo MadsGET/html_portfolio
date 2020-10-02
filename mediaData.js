@@ -174,7 +174,7 @@ let albums =
 			new Media
 			(
 				'12.09.2020',
-				['Tredje portof&oslash;lje utkast', 'Tredje portfolio draft'],
+				['Tredje portof&oslash;lje utkast', 'Third portfolio draft'],
 				[
 					'Dette er punktet hvor jeg sa til meg selv at jeg m&aring; radikalt endre mitt design valg. S&aring; endte jeg opp med &aring; bruke litt tid p&aring; &aring; pr&oslash;ve &aring; forbedre mine egenskaper.',
 					'This became the point where I said to myself I need to radically change course of design flow. So I spent some time trying to improve my design skills.',
