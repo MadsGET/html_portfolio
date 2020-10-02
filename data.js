@@ -1,9 +1,9 @@
 // Page Title
-const pageTitle = [['Om Meg', 'About'], ['Portof&oslash;lje', 'Portfolio'], ['Kontakt', 'Contact']];
+const pageTitle = [['Om Meg', 'About'], ['Portfolio', 'Portfolio'], ['Kontakt', 'Contact']];
 
 // Media Links
 const email = 'Mads@GetAcademy.no';
-const discord = 'MadsF_6295';
+const discord = 'MadsF#6295';
 
 // Images
 const buttonImages = ['iconProject.png', 'iconBlog.png'];
@@ -56,9 +56,9 @@ function getFooter(languageIndex)
 	return `
 		<div class="footer">
 			<div class="footerContent">
-				<div class="footerContainer" style="grid-area: footerContainerL;"><p class="footerText" style="margin-left:auto;"> ${language}<p></div>
+				<div class="footerContainer" style="grid-area: footerContainerL;"><p class="footerText"> ${language}<p></div>
 				<div class="footerContainer toggleButton toggleButton${(languageIndex == 0) ? 'On' : 'Off'}" style="grid-area: footerContainerM;" onclick="languageSelection = (languageSelection == 0) ? 1 : 0; drawView();"></div>
-				<div class="footerContainer" style="grid-area: footerContainerR;"><p class="footerText" style="margin-right:auto;">${copyright}<p></div>
+				<div class="footerContainer" style="grid-area: footerContainerR;"><p class="footerText">${copyright}</p></div>
 			</div>
 		</div>
 	`
@@ -85,8 +85,8 @@ function getContent(pageIndex, languageIndex)
 	else if (pageIndex == 1)
 	{
 		return `	
-		<div class="content" style="">
-			<div class="contentHead"><p class="title" style="font-size:3.5vw"> ${mediaObject.title[languageIndex]} (${(mediaIndex + 1)}/${fetchAlbumLength()})</p></div>
+		<div class="content">
+			<div class="contentHead"><p class="title" style="font-size:3vw"> ${mediaObject.title[languageIndex]} (${(mediaIndex + 1)}/${fetchAlbumLength()})</p></div>
 				<div class="contentBody">
 					<div class="imageContainer">
 					<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;" onclick="onMediaChange(-1);"></div>

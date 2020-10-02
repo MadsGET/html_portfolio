@@ -15,7 +15,7 @@
 {
 	/* Size */
 	height:100%;
-	width:60%;
+	width:50%;
 	margin:auto;
 
 	/* Grid */
@@ -66,9 +66,6 @@
 
 .footerText
 {
-	/* Size */
-	margin: auto;
-
 	/* Font */
 	font-size: 50%;
 	opacity: 0.75;
