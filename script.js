@@ -1,5 +1,5 @@
 // Model
-var currentPageIndex = 0;
+var currentPageIndex = 1;
 var languageSelection = 1; // 0# Nor 1# Eng
 
 // Media Object
@@ -45,7 +45,6 @@ function onMediaChange(delta)
 	{
 		mediaObject = fetchMediaData(mediaIndex + delta);
 		mediaIndex = mediaIndex + delta;
-		console.log(mediaIndex);
 		drawView();
 	}
 }

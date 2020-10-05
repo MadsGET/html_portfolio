@@ -4,6 +4,7 @@ let pathSuffix = '.png';
 
 // Selected album index.
 let selectedAlbumIndex = 0;
+let overlayState = 1; // #0 Image View #1 Album View
 
 // Checks if a numbers within a specified range.
 function withinRange(min, max, value)
@@ -41,11 +42,22 @@ function getOverlayHTML(mediaDataObject, languageIndex)
 			<div class="mediaMenuIcons">
 				<div class="mediaDownload" style="background-image: ${mediaIcons[0]}"></div>
 				<div class="mediaFullscreen" style="background-image: ${mediaIcons[1]}" onclick="window.open('${mediaDataObject.path}')"></div>
-				<div class="mediaMenu" style="background-image: ${mediaIcons[2]}"></div>
+				<div class="mediaMenu" style="background-image: ${mediaIcons[2]}" onclick="overlayState = 1; drawView();"></div>
 			</div>
 		</div>
 			<div style="grid-area: mediaBody"></div>
 			<div class="mediaFooter">- ${mediaDataObject.description[languageIndex]}</div>
 		</div>
+	`;
+}
+
+function getAlbumViewHTML()
+{
+	return `
+		<div class="albumContainer">
+			<div class="albumPreview" style="grid-area: albumPreview; background-image: url('${pathPrefix + selectedAlbumIndex + '/' + '_' + pathSuffix}')"></div>
+			<div class="glassPanel" style="grid-area: buttonOpen"><p>Open</p></div>
+			<div class="glassPanel" style="grid-area: buttonCancel"	><p>Cancel</p></div>
+		</div> 
 	`;
 }

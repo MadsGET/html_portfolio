@@ -21,6 +21,8 @@ class Album
 
 let albums =
 	[
+
+		// #region Album Example
 		//new Album('Album Name',
 		//[
 		//	new Media
@@ -33,7 +35,9 @@ let albums =
 		//		]
 		//	),
 		//]),
+		// #endregion
 
+		// #region Album Web Design #1
 		new Album('Website Creation',
 		[
 			// 1
@@ -225,4 +229,7 @@ let albums =
 				]
 			),
 		]),
+		// #endregion
+
+
 	]

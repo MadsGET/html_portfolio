@@ -73,3 +73,21 @@
 {
 	opacity:0.3;
 }
+
+.albumContainer
+{
+	height:100%;
+	width:100%;
+
+	grid-template-areas:'albumPreview albumPreview' 'buttonOpen buttonCancel';
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 4fr 1fr;
+	display:grid;
+}
+
+.albumPreview
+{
+	background-size: 85% 85%;
+	background-position: center;
+	background-repeat: no-repeat;
+}

@@ -89,9 +89,9 @@ function getContent(pageIndex, languageIndex)
 			<div class="contentHead"><p class="title" style="font-size:3vw"> ${mediaObject.title[languageIndex]} (${(mediaIndex + 1)}/${fetchAlbumLength()})</p></div>
 				<div class="contentBody">
 					<div class="imageContainer">
-					<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;" onclick="onMediaChange(-1);"></div>
-					<div class="imageViewer glassPanel" style="background-image:url('${mediaObject.path}')">${getOverlayHTML(mediaObject, languageIndex)}</div>
-					<div class="arrow" style="grid-area: arrowR; background-image: url('images/${iconImages[6]}'); background-position:center right;" onclick="onMediaChange(+1);"></div>
+					<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;" onclick="(!overlayState) ? onMediaChange(-1) : selectedAlbumIndex -= 1"></div>
+					${(!overlayState ) ? `<div class="imageViewer glassPanel" style="background-image:url('${mediaObject.path}')">${getOverlayHTML(mediaObject, languageIndex)}</div>` : `<div class="albumViewer glassPanel">${getAlbumViewHTML()}</div>`}
+					<div class="arrow" style="grid-area: arrowR; background-image: url('images/${iconImages[6]}'); background-position:center right;" onclick="(!overlayState) ? onMediaChange(+1) : selectedAlbumIndex += 1;"></div>
 					</div>
 				</div>
 			<div class="contentFoot"></div>

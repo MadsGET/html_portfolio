@@ -247,7 +247,6 @@ p
 	grid-template-areas: 'arrowL imageViewer arrowR';
 	grid-template-columns: 0.3fr 2fr 0.3fr;
 	display:grid;
-
 }
 
 .imageViewer
