@@ -85,15 +85,15 @@ function getContent(pageIndex, languageIndex)
 	else if (pageIndex == 1)
 	{
 		let mediaHead = mediaObject.title[languageIndex] + ' (' + (selectedMediaIndex + 1) + '/' + fetchAlbumLength() + ')';
-		let albumHead = albums[selectedAlbumIndex].title[languageIndex] + ' (' + (selectedAlbumIndex + 1) + '/' + albums.length + ')';
+		let albumHead = 'Album ' + albums[selectedAlbumIndex].title[languageIndex] + ' (' + (selectedAlbumIndex + 1) + '/' + albums.length + ')';
 		return `	
 		<div class="content">
 			<div class="contentHead"><p class="title" style="font-size:3vw"> ${(overlayState) ? albumHead : mediaHead}</p></div>
 				<div class="contentBody">
 					<div class="imageContainer">
-					<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;" onclick="(!overlayState) ? onMediaChange(-1) : selectedAlbumIndex -= 1"></div>
+					<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;" onclick="(!overlayState) ? onMediaChange(-1) : onAlbumChange(-1);"></div>
 					${(!overlayState ) ? `<div class="imageViewer glassPanel" style="background-image:url('${mediaObject.path}')">${getOverlayHTML(mediaObject, languageIndex)}</div>` : `<div class="albumViewer glassPanel">${getAlbumViewHTML()}</div>`}
-					<div class="arrow" style="grid-area: arrowR; background-image: url('images/${iconImages[6]}'); background-position:center right;" onclick="(!overlayState) ? onMediaChange(+1) : selectedAlbumIndex += 1;"></div>
+					<div class="arrow" style="grid-area: arrowR; background-image: url('images/${iconImages[6]}'); background-position:center right;" onclick="(!overlayState) ? onMediaChange(+1) : onAlbumChange(+1);"></div>
 					</div>
 				</div>
 			<div class="contentFoot"></div>

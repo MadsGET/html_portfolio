@@ -3,7 +3,7 @@ let pathPrefix = 'albums/';
 let pathSuffix = '.png';
 
 // Selected album index.
-let selectedAlbumIndex = 0;
+let selectedAlbumIndex = 1;
 let selectedMediaIndex = 0;
 let overlayState = 0; // #0 Image View #1 Album View
 
@@ -54,11 +54,12 @@ function getOverlayHTML(mediaDataObject, languageIndex)
 
 function getAlbumViewHTML()
 {
+	// Cancel button not working correctly yet.
 	return `
 		<div class="albumContainer">
 			<div class="albumPreview" style="grid-area: albumPreview; background-image: url('${pathPrefix + selectedAlbumIndex + '/' + '_' + pathSuffix}')"></div>
-			<div class="glassPanel" style="grid-area: buttonOpen"><p>Open</p></div>
-			<div class="glassPanel" style="grid-area: buttonCancel"	><p>Cancel</p></div>
+			<div class="glassPanel" style="grid-area: buttonOpen" onclick="overlayState = 0;"><p>Open</p></div>
+			<div class="glassPanel" style="grid-area: buttonCancel" onclick="overlayState = 0; drawView();"><p>Cancel</p></div>
 		</div> 
 	`;
 }

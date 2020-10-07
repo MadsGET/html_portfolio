@@ -23,7 +23,7 @@ let albums =
 	[
 
 		// #region Album Example
-		//new Album('Album Name',
+		//new Album(['Norsk', 'Engelsk'],
 		//[
 		//	new Media
 		//	(
@@ -38,7 +38,7 @@ let albums =
 		// #endregion
 
 		// #region Album Web Design #1
-		new Album(['Norsk', 'Engelsk'],
+		new Album(['Webdesign', 'Webdesign'],
 		[
 			// 1
 			new Media
@@ -230,6 +230,152 @@ let albums =
 			),
 		]),
 		// #endregion
+	
+		// #region Album 2D Art  #2
+		new Album(['2D Kunst', '2D Art'],
+		[
+			// #1
+			new Media
+			(
+				'05.09.2018',
+				['2.5D skur', '2.5D shed'],
+				[
+					'2.5D er en m&aring;te &aring; simulere 3d objekter i et 2d bilde.',
+					'2.5D is a way to simulate 3d objects in a 2d image.',
+				]
+			),
 
+			// #2
+			new Media
+			(
+				'05.09.2018',
+				['2.5D s&oslash;ppelkasse', '2.5D dumpster'],
+				[
+					'Denne stilen liker jeg p&aring; grunn at den f&oslash;les veldig retro ut.',
+					'I like this style because of the retro feel.',
+				]
+			),
+			
+			// #3
+			new Media
+			(
+				'05.09.2018',
+				['2.5D varehus', '2.5D warehouse'],
+				[
+					'Denne stilen skal jeg pr&oslash;ve meg p&aring; igjen senere.',
+					'This style is on my list to try out again.',
+				]
+			),
 
+			// #4
+			new Media
+			(
+				'19.09.2018',
+				['Digital Frih&aring;ndstegning', 'Handdrawn digital art'],
+				[
+					'Har alltid hatt et &oslash;nske om &aring; skape frih&aring;ndstegnet teksturer, dette var gjort kun med mus istedet for tegnebrett som er mere normalt.',
+					'I have always wanted to create handdrawn digital art, these attempts are all done with mouse instead of an art tablet which would be the norm.',
+				]
+			),
+
+			// #5
+			new Media
+			(
+				'19.09.2018',
+				['Digital Frih&aring;ndstegning', 'Handdrawn digital art'],
+				[
+					'Denne stilen er veldig popul&aelig;r hos blizzard og for meg personlig f&oslash;les ut som den kommer aldri &aring; g&aring; ut av stil.',
+					'This style of digital art is very popular with blizzard, and to me personally I think this style is timeless.',
+				]
+			),
+
+			// #6
+			new Media
+			(
+				'14.05.2018',
+				['Piksel Kunst', 'Pixel Art'],
+				[
+					'Piksel kunst jeg skapte for en klient. Dette er fliser som brukes som bakke tekstur i spillet. Vannet er ogs&aring; animert og skalerbart. ',
+					'Pixel art I have created for a client. This is tiles that is used to create the ground texture in the game. The water is animated and scaleable.',
+				]
+			),
+
+			// #7
+			new Media
+			(
+				'14.05.2018',
+				['Piksel Kunst', 'Pixel Art'],
+				[
+					'Her er noen gjerder jeg lagde for klienten, disse er også skalerbare.',
+					'Here is some fences I created for the client, these are also scaleable.',
+				]
+			),
+
+			// #8
+			new Media
+			(
+				'09.09.2017',
+				['Mur tekstur', 'Brick texture'],
+				[
+					'De siste bilden i dette albumet er teksturer som jeg har skapt kun for treningens skyld.',
+					'The last images in this album is textures that I intenteded to use only for training purposes.',
+				]
+			),
+
+			// #9
+			new Media
+			(
+				'??.??.2017',
+				['Metall rist', 'Metal grate'],
+				[
+					'Brukt som test tekstur for et spill prosjekt.',
+					'Used as a test asset for a game project',
+				]
+			),
+			
+			// #10
+			new Media
+			(
+				'11.06.2018',
+				['Metall b&oslash;lgeplate', 'Metal waveplate'],
+				[
+					'Kun for treningsbruk.',
+					'Only for training purposes.',
+				]
+			),
+
+			// #11
+			new Media
+			(
+				'09.09.2017',
+				['Metall scifi vegg', 'Metal scifi wall'],
+				[
+					'Kun for treningsbruk.',
+					'Only for training purposes.',
+				]
+			),
+
+			// #11
+			new Media
+			(
+				'09.09.2017',
+				['Metall scifi gulv', 'Metal scifi floor'],
+				[
+					'Kun for treningsbruk.',
+					'Only for training purposes.',
+				]
+			),
+
+			// #12
+			new Media
+			(
+				'09.09.2017',
+				['Industrielle vinduer', 'Industrial window'],
+				[
+					'Kun for treningsbruk.',
+					'Only for training purposes.',
+				]
+			),
+		]),
+		// #endregion
 	]

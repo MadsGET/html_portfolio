@@ -47,3 +47,13 @@ function onMediaChange(delta)
 		drawView();
 	}
 }
+
+// On Album Change
+function onAlbumChange(delta)
+{
+	if (withinRange(0, albums.length, selectedAlbumIndex + delta))
+	{
+		selectedAlbumIndex += delta;
+		drawView();
+	}
+}
