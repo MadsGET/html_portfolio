@@ -84,9 +84,11 @@ function getContent(pageIndex, languageIndex)
 	}
 	else if (pageIndex == 1)
 	{
+		let mediaHead = mediaObject.title[languageIndex] + ' (' + (selectedMediaIndex + 1) + '/' + fetchAlbumLength() + ')';
+		let albumHead = albums[selectedAlbumIndex].title[languageIndex] + ' (' + (selectedAlbumIndex + 1) + '/' + albums.length + ')';
 		return `	
 		<div class="content">
-			<div class="contentHead"><p class="title" style="font-size:3vw"> ${mediaObject.title[languageIndex]} (${(mediaIndex + 1)}/${fetchAlbumLength()})</p></div>
+			<div class="contentHead"><p class="title" style="font-size:3vw"> ${(overlayState) ? albumHead : mediaHead}</p></div>
 				<div class="contentBody">
 					<div class="imageContainer">
 					<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;" onclick="(!overlayState) ? onMediaChange(-1) : selectedAlbumIndex -= 1"></div>

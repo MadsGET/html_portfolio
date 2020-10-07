@@ -38,7 +38,7 @@ let albums =
 		// #endregion
 
 		// #region Album Web Design #1
-		new Album('Website Creation',
+		new Album(['Norsk', 'Engelsk'],
 		[
 			// 1
 			new Media

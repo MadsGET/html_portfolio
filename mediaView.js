@@ -4,7 +4,8 @@ let pathSuffix = '.png';
 
 // Selected album index.
 let selectedAlbumIndex = 0;
-let overlayState = 1; // #0 Image View #1 Album View
+let selectedMediaIndex = 0;
+let overlayState = 0; // #0 Image View #1 Album View
 
 // Checks if a numbers within a specified range.
 function withinRange(min, max, value)

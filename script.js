@@ -3,8 +3,7 @@ var currentPageIndex = 1;
 var languageSelection = 1; // 0# Nor 1# Eng
 
 // Media Object
-let mediaIndex = 0;
-let mediaObject = fetchMediaData(mediaIndex);
+let mediaObject = fetchMediaData(selectedMediaIndex);
 
 // View
 function drawView()
@@ -41,10 +40,10 @@ function updateTitleText()
 // On Media Change
 function onMediaChange(delta)
 {
-	if (withinRange(0, albums[selectedAlbumIndex].mediaArray.length, mediaIndex + delta))
+	if (withinRange(0, albums[selectedAlbumIndex].mediaArray.length, selectedMediaIndex + delta))
 	{
-		mediaObject = fetchMediaData(mediaIndex + delta);
-		mediaIndex = mediaIndex + delta;
+		mediaObject = fetchMediaData(selectedMediaIndex + delta);
+		selectedMediaIndex = selectedMediaIndex + delta;
 		drawView();
 	}
 }
