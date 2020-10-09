@@ -30,6 +30,7 @@ function fetchMediaData(index)
 	// Get fetched object and its associated data with a certian language.
 	let fetchedObject = albums[selectedAlbumIndex].mediaArray[index];
 	fetchedObject.path = pathPrefix + selectedAlbumIndex + '/' + index + pathSuffix;
+	fetchedObject.albumID = selectedAlbumIndex;
 
 	return fetchedObject;
 }
@@ -58,8 +59,29 @@ function getAlbumViewHTML()
 	return `
 		<div class="albumContainer">
 			<div class="albumPreview" style="grid-area: albumPreview; background-image: url('${pathPrefix + selectedAlbumIndex + '/' + '_' + pathSuffix}')"></div>
-			<div class="glassPanel" style="grid-area: buttonOpen" onclick="overlayState = 0;"><p>Open</p></div>
-			<div class="glassPanel" style="grid-area: buttonCancel" onclick="overlayState = 0; drawView();"><p>Cancel</p></div>
+			<div class="glassPanel" style="grid-area: buttonOpen" onclick="onAlbumOpen();"><p>Open</p></div>
+			<div class="glassPanel" style="grid-area: buttonCancel" onclick="onAlbumCancel();"><p>Cancel</p></div>
 		</div> 
 	`;
+}
+
+function onAlbumOpen()
+{
+	// If the album index and object album id does not match.
+	if (selectedAlbumIndex != mediaObject.albumID)
+	{
+		selectedMediaIndex = 0;
+		mediaObject = fetchMediaData(0);
+	}
+
+	// Reset overlay state and draw view.
+	overlayState = 0;
+	drawView(); 
+}
+
+function onAlbumCancel()
+{
+	overlayState = 0;
+	selectedAlbumIndex = mediaObject.albumID;
+	drawView();
 }
