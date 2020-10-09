@@ -57,3 +57,8 @@ function onAlbumChange(delta)
 		drawView();
 	}
 }
+
+function implementationAlert()
+{
+	alert('This site is under construction please check back at a later date.');
+}

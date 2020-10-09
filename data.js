@@ -117,14 +117,14 @@ function getContent(pageIndex, languageIndex)
 						<div class="glassPanel contactContainer">
 							<div class="buttonPanel">
 								<div class="glassPanel socialMediaPanel" style="${panelColor} grid-area:socialMedia">
-									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[2]}');"></div>
-									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[3]}');"></div>
-									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[4]}');"></div>
+									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[2]}');" onclick="implementationAlert();"></div>
+									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[3]}');" onclick="implementationAlert();"></div>
+									<div class="socialMediaIcon" style="background-image: url('images/${iconImages[4]}');" onclick="implementationAlert();"></div>
 								</div>
-								<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonL; background-image: url('images/${buttonImages[0]}');">
+								<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonL; background-image: url('images/${buttonImages[0]}');" onclick="implementationAlert();">
 									<p class="hiddenText">${projectText}</p>
 								</div>
-								<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonR; background-image: url('images/${buttonImages[1]}');">
+								<div class="glassPanel largeButton" style="${panelColor} grid-area:largeButtonR; background-image: url('images/${buttonImages[1]}');" onclick="implementationAlert();">
 									<p class="hiddenText">${blogText}</p>
 								</div>
 								<div class="glassPanel textfield" style="${panelColor} grid-area:textfieldL; background-image: url('images/${iconImages[0]}')" ${OnTextFieldEnter(email)} ${OnTextFieldExit('Email')}>

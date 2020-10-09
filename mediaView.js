@@ -55,12 +55,11 @@ function getOverlayHTML(mediaDataObject, languageIndex)
 
 function getAlbumViewHTML()
 {
-	// Cancel button not working correctly yet.
 	return `
 		<div class="albumContainer">
 			<div class="albumPreview" style="grid-area: albumPreview; background-image: url('${pathPrefix + selectedAlbumIndex + '/' + '_-1' + pathSuffix}')"></div>
-			<div class="glassPanel" style="grid-area: buttonOpen" onclick="onAlbumOpen();"><p>Open</p></div>
-			<div class="glassPanel" style="grid-area: buttonCancel" onclick="onAlbumCancel();"><p>Cancel</p></div>
+			<div class="glassPanel" style="grid-area: buttonOpen" onclick="onAlbumOpen();"><p>${(!languageSelection) ? '&Aring;pne' : 'Open'}</p></div>
+			<div class="glassPanel" style="grid-area: buttonCancel" onclick="onAlbumCancel();"><p>${(!languageSelection) ? 'Avbryt' : 'Cancel'}</p></div>
 		</div> 
 	`;
 }
