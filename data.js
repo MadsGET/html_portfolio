@@ -15,9 +15,9 @@ const titleText = [['< Hallo Verden >', '< Hello World >'], ['Image (0/0)', 'Ima
 // Static text fields
 const largeInfo =
 [		
-		`Velkommen til min portf&oslash;lje side! Jeg har alltid hatt en interesse for datamaskiner og videospill, og over tid s&aring; har produsert en god del ressurser for applikasjoner, websider og spill. Som dere kan n&aring; se p&aring portof&oslash;lje seksjonen.
+		`Velkommen til min portf&oslash;lje side! Jeg har alltid hatt en interesse for datamaskiner og videospill, og over tid s&aring; har jeg produsert en god del ressurser for applikasjoner, websider og spill. Som dere kan n&aring; se p&aring portof&oslash;lje seksjonen.
 
-		Over tiden har jeg f&aring;tt en erfaringskurve som gj&oslash;r at jeg kan b&aring;de lage produkter for den visuelle og den kodebaserte delen av et prosjekt.
+		Derfor har jeg f&aring;tt en erfaringskurve som gj&oslash;r at jeg kan b&aring;de lage produkter for den visuelle og den kodebaserte delen av et prosjekt.
 
 		Til slutt s&aring; &oslash;nsker jeg &aring; takke dere for at dere viser interesse til meg og mitt arbeid. Og jeg vil gjerne peke ut at alt p&aring; denne siden fra den grafiske til kode biten av denne siden er produsert av meg. Jeg h&aringper at dere finner denne sidens innhold verdifullt, og h&aring;per at dere tenker p&aring meg til deres neste prosjekt.`
 		,
