@@ -42,7 +42,7 @@ function getOverlayHTML(mediaDataObject, languageIndex)
 			<div class="mediaHead">
 			<div class="mediaDate">${(!languageIndex) ? 'Opprettelsesdato' : 'Creation Date'}: ${ mediaDataObject.date }</div >
 			<div class="mediaMenuIcons">
-				<a class="mediaDownload" style="background-image: ${mediaIcons[0]}" href="albums/${selectedAlbumIndex}/${selectedMediaIndex}.png" download="${mediaDataObject.title[1]}"></a>
+				<a class="mediaDownload" style="background-image: ${mediaIcons[0]}" href="albums/${selectedAlbumIndex}/${selectedMediaIndex}.${pathSuffix}" download="${mediaDataObject.title[1]}"></a>
 				<div class="mediaFullscreen" style="background-image: ${mediaIcons[1]}" onclick="window.open('${mediaDataObject.path}')"></div>
 				<div class="mediaMenu" style="background-image: ${mediaIcons[2]}" onclick="overlayState = 1; drawView();"></div>
 			</div>
@@ -57,7 +57,7 @@ function getAlbumViewHTML()
 {
 	return `
 		<div class="albumContainer">
-			<div class="albumPreview" style="grid-area: albumPreview; background-image: url('${pathPrefix + selectedAlbumIndex + '/' + '_-1' + pathSuffix}')"></div>
+			<div class="albumPreview" style="grid-area: albumPreview; background-image: url('${pathPrefix + selectedAlbumIndex + '/' + '_' + pathSuffix}')"></div>
 			<div class="glassPanel" style="grid-area: buttonOpen" onclick="onAlbumOpen();"><p>${(!languageSelection) ? '&Aring;pne' : 'Open'}</p></div>
 			<div class="glassPanel" style="grid-area: buttonCancel" onclick="onAlbumCancel();"><p>${(!languageSelection) ? 'Avbryt' : 'Cancel'}</p></div>
 		</div> 
