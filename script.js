@@ -1,5 +1,5 @@
 // Model
-var currentPageIndex = 1;
+var currentPageIndex = 0;
 var languageSelection = 1; // 0# Nor 1# Eng
 
 // Media Object
