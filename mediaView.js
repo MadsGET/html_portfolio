@@ -58,8 +58,8 @@ function getAlbumViewHTML()
 	return `
 		<div class="albumContainer">
 			<div class="albumPreview" style="grid-area: albumPreview; background-image: url('${pathPrefix + selectedAlbumIndex + '/' + 'preview' + pathSuffix}')"></div>
-			<div class="glassPanel" style="grid-area: buttonOpen" onclick="onAlbumOpen();"><p>${(!languageSelection) ? '&Aring;pne' : 'Open'}</p></div>
-			<div class="glassPanel" style="grid-area: buttonCancel" onclick="onAlbumCancel();"><p>${(!languageSelection) ? 'Avbryt' : 'Cancel'}</p></div>
+			<div class="buttonOpen" onclick="onAlbumOpen();"><p>${(!languageSelection) ? '&Aring;pne' : 'Open'}</p></div>
+			<div class="buttonCancel" onclick="onAlbumCancel();"><p>${(!languageSelection) ? 'Avbryt' : 'Cancel'}</p></div>
 		</div> 
 	`;
 }
