@@ -1,6 +1,6 @@
 // Album path strings
 let pathPrefix = 'albums/';
-let pathSuffix = '.png';
+let pathSuffix = '.jpeg';
 
 // Selected album index.
 let selectedAlbumIndex = 0;
