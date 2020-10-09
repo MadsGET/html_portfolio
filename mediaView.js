@@ -42,7 +42,7 @@ function getOverlayHTML(mediaDataObject, languageIndex)
 			<div class="mediaHead">
 			<div class="mediaDate">${(!languageIndex) ? 'Opprettelsesdato' : 'Creation Date'}: ${ mediaDataObject.date }</div >
 			<div class="mediaMenuIcons">
-				<div class="mediaDownload" style="background-image: ${mediaIcons[0]}"></div>
+				<a class="mediaDownload" style="background-image: ${mediaIcons[0]}" href="albums/0/0.png" download></a>
 				<div class="mediaFullscreen" style="background-image: ${mediaIcons[1]}" onclick="window.open('${mediaDataObject.path}')"></div>
 				<div class="mediaMenu" style="background-image: ${mediaIcons[2]}" onclick="overlayState = 1; drawView();"></div>
 			</div>
