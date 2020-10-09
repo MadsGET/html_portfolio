@@ -3,7 +3,7 @@ let pathPrefix = 'albums/';
 let pathSuffix = '.png';
 
 // Selected album index.
-let selectedAlbumIndex = 1;
+let selectedAlbumIndex = 0;
 let selectedMediaIndex = 0;
 let overlayState = 0; // #0 Image View #1 Album View
 
