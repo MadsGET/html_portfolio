@@ -9,13 +9,15 @@
 	/* Flex */
 	align-items:center;
 	display:flex;
+
+	min-height:32px;
 }
 
 .footerContent
 {
 	/* Size */
 	height:100%;
-	width:50%;
+	width:43%;
 	margin:auto;
 
 	/* Grid */
@@ -66,6 +68,9 @@
 
 .footerText
 {
+	width:100%;
+	margin:auto;
+
 	/* Font */
 	font-size: 50%;
 	opacity: 0.75;

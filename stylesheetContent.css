@@ -30,6 +30,7 @@ p
 
 .contentHead
 {
+
 	/* Borders */
 	border-left: none;
 	border-right: none;
@@ -55,7 +56,6 @@ p
 .title
 {
 	/* Size */
-	width: 50%;
 	margin: auto;
 	margin-bottom: 0.5%;
 	
@@ -107,8 +107,8 @@ p
 
 .aboutTitle
 {
-	margin-left: 0;
-	font-size: 4vw;
+	font-size: 4vmax;
+	margin-left:10%;
 }
 
 .aboutContainer
@@ -133,10 +133,16 @@ p
 
 
 															/* Contact Page */
-.contactTitle
+.contactTitleENG
 {
-	margin-right: 0;
-	font-size: 3.5vw;
+	font-size: 3vmax;
+	margin-right: 9.5%;
+}
+
+.contactTitleNO
+{
+	font-size: 3vmax;
+	margin-right: 7.5%;
 }
 
 .contactContainer

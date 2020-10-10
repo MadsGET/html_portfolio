@@ -56,9 +56,9 @@ function getFooter(languageIndex)
 	return `
 		<div class="footer">
 			<div class="footerContent">
-				<div class="footerContainer" style="grid-area: footerContainerL;"><p class="footerText"> ${language}<p></div>
+				<div class="footerContainer" style="grid-area: footerContainerL; text-align:left;"><p class="footerText"> ${language}<p></div>
 				<div class="footerContainer toggleButton toggleButton${(languageIndex == 0) ? 'On' : 'Off'}" style="grid-area: footerContainerM;" onclick="languageSelection = (languageSelection == 0) ? 1 : 0; drawView();"></div>
-				<div class="footerContainer" style="grid-area: footerContainerR;"><p class="footerText">${copyright}</p></div>
+				<div class="footerContainer" style="grid-area: footerContainerR; text-align:right;"><p class="footerText">${copyright}</p></div>
 			</div>
 		</div>
 	`
@@ -88,7 +88,7 @@ function getContent(pageIndex, languageIndex)
 		let albumHead = 'Album ' + albums[selectedAlbumIndex].title[languageIndex] + ' (' + (selectedAlbumIndex + 1) + '/' + albums.length + ')';
 		return `	
 		<div class="content">
-			<div class="contentHead"><p class="title" style="font-size:3vw"> ${(overlayState) ? albumHead : mediaHead}</p></div>
+			<div class="contentHead"><p class="title" width:100%; style="font-size:3.75vmax"> ${(overlayState) ? albumHead : mediaHead}</p></div>
 				<div class="contentBody">
 					<div class="imageContainer">
 					<div class="arrow" style="grid-area: arrowL; background-image: url('images/${iconImages[5]}'); background-position:center left;" onclick="(!overlayState) ? onMediaChange(-1) : onAlbumChange(-1);"></div>
@@ -112,7 +112,7 @@ function getContent(pageIndex, languageIndex)
 
 		return `	
 				<div class="content">
-					<div class="contentHead"><p class="contactTitle title"> ${_titleText}</p></div>
+					<div class="contentHead"><p class="${(!languageIndex ? 'contactTitleNO' : 'contactTitleENG')} title"> ${_titleText}</p></div>
 					<div class="contentBody">
 						<div class="glassPanel contactContainer">
 							<div class="buttonPanel">
@@ -146,10 +146,10 @@ function getContent(pageIndex, languageIndex)
 
 function OnTextFieldEnter(text)
 {
-	return `onMouseEnter = "this.children[0].innerText = '${text}'; console.log(true);"`;
+	return `onMouseEnter = "this.children[0].innerText = '${text}';"`;
 }
 
 function OnTextFieldExit(text)
 {
-	return `onMouseLeave = "this.children[0].innerText = '${text}'; console.log(false);"`;
+	return `onMouseLeave = "this.children[0].innerText = '${text}';"`;
 }
